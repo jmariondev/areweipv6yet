@@ -1,0 +1,22 @@
+{
+  "name": "areweipv6yet",
+  "version": "1.0.0",
+  "description": "Track IPv6 adoption across popular services",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.js",
+    "validate": "node scripts/validate-data.js",
+    "check-ipv6": "node scripts/check-ipv6.js",
+    "dev": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1",
+    "js-yaml": "^4.1.0",
+    "wrangler": "^3.0.0"
+  },
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.4.0"
+  }
+}

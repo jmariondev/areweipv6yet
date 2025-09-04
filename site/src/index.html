@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are We IPv6 Yet?</title>
+  <meta name="description" content="Track IPv6 adoption across popular services and applications">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Are We IPv6 Yet?</h1>
+    <p class="tagline">Tracking IPv6 adoption across popular services</p>
+  </header>
+  
+  <main>
+    <section class="summary">
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-number">{{STATS_FULL}}</span>
+          <span class="stat-label">Full Support</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">{{STATS_PARTIAL}}</span>
+          <span class="stat-label">Partial Support</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">{{STATS_NONE}}</span>
+          <span class="stat-label">No Support</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">{{STATS_UNKNOWN}}</span>
+          <span class="stat-label">Unknown</span>
+        </div>
+      </div>
+    </section>
+    
+    <section class="filters">
+      <input type="search" id="search" placeholder="Search services...">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="full">✅ Full</button>
+        <button class="filter-btn" data-filter="partial">🟨 Partial</button>
+        <button class="filter-btn" data-filter="none">❌ None</button>
+        <button class="filter-btn" data-filter="unknown">❓ Unknown</button>
+      </div>
+    </section>
+    
+    <section class="services" id="services">
+      {{SERVICES}}
+    </section>
+  </main>
+  
+  <footer>
+    <p>Last updated: <time datetime="{{LAST_UPDATED}}">{{LAST_UPDATED}}</time></p>
+    <p>
+      <a href="https://github.com/jmariondev/areweipv6yet">Contribute on GitHub</a> | 
+      <a href="/api.json">Raw Data</a>
+    </p>
+    <div class="disclaimer">
+      <p><strong>Disclaimer:</strong></p>
+      <p>
+        This data is provided "as is" for informational purposes only. IPv6 support status is based on 
+        automated DNS checks and community contributions. Actual IPv6 functionality may vary by region, 
+        ISP, and service configuration. We make no warranties about the accuracy, completeness, or 
+        currency of this information. Service names and trademarks belong to their respective owners. 
+        Always verify IPv6 support directly with service providers for critical applications.
+      </p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

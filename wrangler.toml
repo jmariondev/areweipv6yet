@@ -1,0 +1,20 @@
+name = "areweipv6yet"
+main = "workers/index.js"
+compatibility_date = "2024-01-01"
+
+[site]
+bucket = "./site/dist"
+
+[[routes]]
+pattern = "areweipv6yet.com/*"
+zone_name = "areweipv6yet.com"
+
+[[routes]]
+pattern = "www.areweipv6yet.com/*"
+zone_name = "areweipv6yet.com"
+
+[env.production]
+name = "areweipv6yet-production"
+
+[env.staging]
+name = "areweipv6yet-staging"
