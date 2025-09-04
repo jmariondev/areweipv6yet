@@ -74,3 +74,4 @@ This is a static site generator that tracks IPv6 adoption across popular web ser
 - The IPv6 checker script modifies `data/services.yaml` in-place
 - Service IDs must be lowercase alphanumeric with hyphens only
 - Each service requires at minimum: id, name, url, category, ipv6.status, ipv6.tests array
+- when writing quick hack scripts (eg migrations that we're about to delete), use node. python is not available in this environment.

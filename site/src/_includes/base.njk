@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="keywords" content="IPv6, IPv6 adoption, IPv6 support, IPv6 status, IPv6 checker, IPv6 test, network protocols, internet protocol">
+  <link rel="canonical" href="https://areweipv6yet.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://areweipv6yet.com/">
+  <meta property="og:title" content="Are We IPv6 Yet? - Track IPv6 Adoption">
+  <meta property="og:description" content="Track IPv6 adoption across major websites and services. See which popular platforms support IPv6.">
+  <meta property="og:site_name" content="Are We IPv6 Yet?">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://areweipv6yet.com/">
+  <meta name="twitter:title" content="Are We IPv6 Yet? - Track IPv6 Adoption">
+  <meta name="twitter:description" content="Track IPv6 adoption across major websites and services. See which popular platforms support IPv6.">
+  
+  <link rel="stylesheet" href="style.css">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Are We IPv6 Yet?",
+    "description": "Track IPv6 adoption across major websites and services with real-time status monitoring",
+    "url": "https://areweipv6yet.com/",
+    "author": {
+      "@type": "Organization",
+      "name": "Are We IPv6 Yet Community",
+      "url": "https://github.com/jmariondev/areweipv6yet"
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "IPv6 Protocol Adoption",
+      "description": "Internet Protocol version 6 adoption tracking"
+    },
+    "dateModified": "{{ generated | isoDate }}",
+    "inLanguage": "en-US"
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Are We IPv6 Yet?</h1>
+    <p class="tagline">Track IPv6 adoption across major websites and services</p>
+  </header>
+  
+  <main>
+    {{ content | safe }}
+  </main>
+  
+  <footer>
+    <p>Last updated: <time datetime="{{ generated | isoDate }}">{{ generated | isoDate }}</time></p>
+    <p>
+      <a href="https://github.com/jmariondev/areweipv6yet">Contribute on GitHub</a> | 
+      <a href="/api.json">Raw Data</a>
+    </p>
+    <div class="disclaimer">
+      <p><strong>Disclaimer:</strong></p>
+      <p>
+        This data is provided "as is" for informational purposes only. IPv6 support status is based on 
+        automated DNS checks and community contributions. Actual IPv6 functionality may vary by region, 
+        ISP, and service configuration. We make no warranties about the accuracy, completeness, or 
+        currency of this information. Service names and trademarks belong to their respective owners. 
+        Always verify IPv6 support directly with service providers for critical applications.
+      </p>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

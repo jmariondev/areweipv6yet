@@ -313,7 +313,6 @@ main {
   color: var(--text);
   border-radius: 0.25rem;
   cursor: pointer;
-  transition: all 0.2s;
 }
 
 .filter-btn:hover {
