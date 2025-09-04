@@ -19,17 +19,6 @@
           },
           "category": { "type": "string" },
           "description": { "type": "string" },
-          "cloud_services": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "name": { "type": "string" },
-                "ipv6_status": { "enum": ["full", "partial", "none", "unknown"] },
-                "notes": { "type": "string" }
-              }
-            }
-          },
           "ipv6": {
             "type": "object",
             "required": ["status", "tests"],

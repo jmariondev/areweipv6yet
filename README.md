@@ -29,11 +29,17 @@ We welcome contributions! You can help by:
    - id: service-id
      name: Service Name
      url: https://example.com
-     category: category-name
+     category: category-name  # e.g., search, social, cloud, video, etc.
      description: "Brief description"
+     type: service  # Optional: service (default) or cloud
      ipv6:
        status: unknown  # unknown/none/partial/full
-       aaaa_record: false
+       tests:
+         - id: aaaa_record
+           name: IPv6 Address
+           description: "Main domain has IPv6 addresses (AAAA records)"
+           result: null  # true/false/null
+           last_checked: null
        notes: ""
        last_checked: null
        last_manual_verification: null
@@ -109,7 +115,14 @@ The service data is available as JSON at `/api.json`.
       "category": "communication",
       "ipv6": {
         "status": "none",
-        "aaaa_record": false,
+        "tests": [
+          {
+            "id": "aaaa_record",
+            "name": "IPv6 Address",
+            "result": false,
+            "last_checked": "2024-01-15T00:00:00Z"
+          }
+        ],
         "notes": "No IPv6 support as of 2024",
         "last_checked": "2024-01-15T00:00:00Z"
       }
@@ -124,7 +137,10 @@ The site is automatically deployed to Cloudflare Pages when changes are pushed t
 
 ## License
 
-MIT
+- **Code**: Mozilla Public License 2.0 (MPL-2.0)
+- **Data** (`data/services.yaml`): CC0 1.0 Universal (Public Domain)
+
+The IPv6 adoption data in this repository is free to use, modify, and distribute for any purpose without attribution, though attribution is appreciated.
 
 ## Acknowledgments
 

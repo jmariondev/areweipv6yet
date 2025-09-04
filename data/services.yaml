@@ -1,3 +1,8 @@
+# IPv6 Adoption Data
+# License: CC0 1.0 Universal (Public Domain)
+# This data is free to use, modify, and distribute for any purpose.
+# See data/LICENSE for full details.
+
 services:
   - id: google
     name: Google

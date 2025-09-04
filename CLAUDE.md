@@ -25,6 +25,7 @@ This is a static site generator that tracks IPv6 adoption across popular web ser
 - **Services Database**: `data/services.yaml` - Main database of services and their IPv6 status
 - **Schema Validation**: `data/schema.json` - JSON Schema for service data validation
 - **Status Types**: `unknown`, `none`, `partial`, `full`
+- **Service Types**: `service` (default), `cloud` (for cloud providers)
 - **Test System**: Each service has an array of individual IPv6 tests (AAAA records, connectivity, etc.)
 
 ### Build Process
