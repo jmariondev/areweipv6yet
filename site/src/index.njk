@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Are We IPv6 Yet? - Track IPv6 Adoption Across Popular Services
-description: Track IPv6 adoption across major websites and services. Do your favorite services support the future of the internet?
+description: Find out if Google, Netflix, GitHub, and 60+ other popular services support IPv6. Community-driven tracker with automated DNS verification and detailed test results.
 ---
 {%- set sortedServices = serviceList | sortServices -%}
 {%- set statsFull = serviceList | countByStatus('full') -%}
