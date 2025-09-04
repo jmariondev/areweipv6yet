@@ -2,14 +2,14 @@ export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
     
-    // Redirect alternate domains to primary domain
-    const alternativeDomains = ['areweipv6yet.net', 'areweipv6yet.org', 'arewev6yet.com'];
-    const hostname = url.hostname.replace('www.', ''); // Strip www for comparison
+    // Define primary domain (without www)
+    const primaryDomain = 'areweipv6yet.com';
     
-    if (alternativeDomains.includes(hostname)) {
-      // Redirect to primary domain, preserving path and query string
+    // Redirect all non-primary domains and all www variants to primary apex domain
+    if (url.hostname !== primaryDomain) {
+      // Redirect to primary apex domain, preserving path and query string
       const primaryUrl = new URL(url);
-      primaryUrl.hostname = 'areweipv6yet.com';
+      primaryUrl.hostname = primaryDomain;
       return Response.redirect(primaryUrl.toString(), 301);
     }
     
