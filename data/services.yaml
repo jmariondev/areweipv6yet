@@ -1,8 +1,3 @@
-# IPv6 Adoption Data
-# License: CC0 1.0 Universal (Public Domain)
-# This data is free to use, modify, and distribute for any purpose.
-# See data/LICENSE for full details.
-
 services:
   - id: google
     name: Google
@@ -13,13 +8,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: Full IPv6 support across all services
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: youtube
     name: YouTube
@@ -30,13 +22,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: Complete IPv6 support
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: facebook
     name: Facebook
@@ -47,13 +36,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: IPv6 enabled globally
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: wikipedia
     name: Wikipedia
@@ -64,13 +50,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: Full IPv6 support
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: netflix
     name: Netflix
@@ -81,13 +64,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: Full IPv6 support, works with ISPs that provide IPv6
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: reddit
     name: Reddit
@@ -98,13 +78,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: reddit.com supports IPv6, but www.reddit.com does not
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: discord
     name: Discord
@@ -115,13 +92,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: No IPv6 support on main service or voice servers
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: steam
     name: Steam
@@ -132,13 +106,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_variant
           name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: null
-      notes: No IPv6 support for store or CDN
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: github
     name: GitHub
@@ -149,13 +120,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: No IPv6 support (as of 2025)
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: x
     name: X (Twitter)
@@ -166,13 +134,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: No IPv6 support
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: amazon
     name: Amazon Shopping
@@ -183,13 +148,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: www.amazon.com supports IPv6, but amazon.com (apex) does not
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: duckduckgo
     name: DuckDuckGo
@@ -200,13 +162,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: No IPv6 support
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: spotify
     name: Spotify
@@ -217,13 +176,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: Full IPv6 support on both spotify.com and www.spotify.com
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: twitch
     name: Twitch
@@ -234,13 +190,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: No IPv6 connectivity (both main domain and www variant fail to connect)
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: aws
     name: Amazon Web Services
@@ -251,13 +204,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_variant
           name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: null
-      notes: AWS console supports IPv6 (both main domain and www variant work)
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: gcp
     name: Google Cloud Platform
@@ -268,13 +218,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_variant
           name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: null
-      notes: Full IPv6 support on cloud.google.com
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: azure
     name: Microsoft Azure
@@ -285,13 +232,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_variant
           name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: null
-      notes: Full IPv6 support on azure.microsoft.com
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: cloudflare
     name: Cloudflare
@@ -302,13 +246,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: Full IPv6 support (both main domain and www variant work)
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: digitalocean
     name: DigitalOcean
@@ -319,13 +260,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: Full IPv6 support on both digitalocean.com and www.digitalocean.com
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: instagram
     name: Instagram
@@ -336,13 +274,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: tiktok
     name: TikTok
@@ -353,13 +288,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: linkedin
     name: LinkedIn
@@ -370,13 +302,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: pinterest
     name: Pinterest
@@ -387,13 +316,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: snapchat
     name: Snapchat
@@ -404,13 +330,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: whatsapp
     name: WhatsApp Web
@@ -421,9 +344,7 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: disney-plus
     name: Disney+
@@ -434,13 +355,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: hulu
     name: Hulu
@@ -451,13 +369,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: hbo-max
     name: Max (HBO Max)
@@ -468,13 +383,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: apple-tv
     name: Apple TV+
@@ -485,9 +397,7 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: paramount-plus
     name: Paramount+
@@ -498,13 +408,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: ebay
     name: eBay
@@ -515,13 +422,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: walmart
     name: Walmart
@@ -532,13 +436,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: target
     name: Target
@@ -549,13 +450,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: uber
     name: Uber
@@ -566,13 +464,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: airbnb
     name: Airbnb
@@ -583,13 +478,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: doordash
     name: DoorDash
@@ -600,13 +492,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: stackoverflow
     name: Stack Overflow
@@ -617,13 +506,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: gitlab
     name: GitLab
@@ -634,13 +520,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: npm
     name: npm
@@ -651,13 +534,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: docker-hub
     name: Docker Hub
@@ -668,9 +548,7 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: vercel
     name: Vercel
@@ -681,13 +559,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: netlify
     name: Netlify
@@ -698,13 +573,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: paypal
     name: PayPal
@@ -715,13 +587,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: stripe
     name: Stripe
@@ -732,13 +601,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: zoom
     name: Zoom
@@ -749,13 +615,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: slack
     name: Slack
@@ -766,13 +629,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: microsoft-365
     name: Microsoft 365
@@ -783,13 +643,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: dropbox
     name: Dropbox
@@ -800,13 +657,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: cnn
     name: CNN
@@ -817,13 +671,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: bbc
     name: BBC
@@ -834,13 +685,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: nytimes
     name: The New York Times
@@ -851,13 +699,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: medium
     name: Medium
@@ -868,13 +713,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: claude
     name: Claude
@@ -885,13 +727,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: anthropic
     name: Anthropic
@@ -902,13 +741,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: openai
     name: OpenAI
@@ -919,13 +755,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: chatgpt
     name: ChatGPT
@@ -936,13 +769,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: huggingface
     name: Hugging Face
@@ -953,13 +783,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: perplexity
     name: Perplexity
@@ -970,13 +797,10 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: gemini
     name: Google Gemini
@@ -987,9 +811,7 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
   - id: midjourney
     name: Midjourney
@@ -1000,11 +822,8 @@ services:
       tests:
         - id: apex_domain
           name: Apex Domain
-          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_domain
           name: WWW Domain
-          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: ''
       last_checked: '2025-09-04T07:05:20.583Z'
