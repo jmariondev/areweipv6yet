@@ -73,7 +73,7 @@ async function main() {
         }).join('')}
       </div>
       
-      ${service.ipv6.last_checked ? `<p class="last-checked">Last checked: ${new Date(service.ipv6.last_checked).toLocaleDateString()}</p>` : ''}
+      ${service.ipv6.last_checked ? `<p class="last-checked">Last checked: ${new Date(service.ipv6.last_checked).toISOString().split('T')[0]}</p>` : ''}
     </div>`;
   }).join('\n');
   
@@ -85,7 +85,7 @@ async function main() {
     .replace('{{STATS_PARTIAL}}', stats.partial)
     .replace('{{STATS_NONE}}', stats.none)
     .replace('{{STATS_UNKNOWN}}', stats.unknown)
-    .replace('{{LAST_UPDATED}}', new Date().toISOString());
+    .replaceAll('{{LAST_UPDATED}}', new Date().toISOString());
   
   // Ensure dist directory exists
   await fs.mkdir('site/dist', { recursive: true });
