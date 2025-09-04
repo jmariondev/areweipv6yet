@@ -1,0 +1,19 @@
+# humanstxt.org
+
+/* TEAM */
+    Project: Are We IPv6 Yet?
+    GitHub: https://github.com/jmariondev/areweipv6yet
+    
+/* THANKS */
+    IPv6 Community: For pushing adoption forward
+    Contributors: Everyone who submits updates and corrections
+    
+/* SITE */
+    Language: English
+    Standards: HTML5, CSS3, JavaScript
+    Components: Vanilla JS, No frameworks
+    Hosting: Cloudflare Workers
+    
+/* PURPOSE */
+    Tracking IPv6 adoption across popular services
+    Promoting IPv6 awareness and implementation

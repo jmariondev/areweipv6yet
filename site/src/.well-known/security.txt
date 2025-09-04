@@ -1,0 +1,9 @@
+# Security Policy for areweipv6yet.com
+
+Contact: https://github.com/jmariondev/areweipv6yet/security
+Expires: 2026-01-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://areweipv6yet.com/.well-known/security.txt
+
+# Report security issues via GitHub
+# This is a community-driven IPv6 tracking site

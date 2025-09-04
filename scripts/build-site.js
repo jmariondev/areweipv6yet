@@ -91,6 +91,32 @@ async function main() {
   await fs.copyFile('site/src/style.css', 'site/dist/style.css');
   await fs.copyFile('site/src/script.js', 'site/dist/script.js');
   
+  // Copy robots.txt and humans.txt if they exist
+  try {
+    await fs.copyFile('site/src/robots.txt', 'site/dist/robots.txt');
+  } catch (e) {
+    // File doesn't exist, ignore
+  }
+  try {
+    await fs.copyFile('site/src/humans.txt', 'site/dist/humans.txt');
+  } catch (e) {
+    // File doesn't exist, ignore
+  }
+  
+  // Copy .well-known directory if it exists
+  try {
+    const wellKnownFiles = await fs.readdir('site/src/.well-known');
+    await fs.mkdir('site/dist/.well-known', { recursive: true });
+    for (const file of wellKnownFiles) {
+      await fs.copyFile(
+        path.join('site/src/.well-known', file),
+        path.join('site/dist/.well-known', file)
+      );
+    }
+  } catch (e) {
+    // Directory doesn't exist, ignore
+  }
+  
   // Generate API JSON
   await fs.writeFile('site/dist/api.json', JSON.stringify(data, null, 2));
   

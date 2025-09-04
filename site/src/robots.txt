@@ -1,0 +1,8 @@
+# robots.txt for areweipv6yet.com
+# Allow all crawlers
+
+User-agent: *
+Allow: /
+
+# Sitemap location (if we add one later)
+# Sitemap: https://areweipv6yet.com/sitemap.xml
