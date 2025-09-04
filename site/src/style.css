@@ -481,11 +481,125 @@ main {
   margin-top: 0.5rem;
 }
 
+/* Contribution section */
+.contribute-section {
+  margin: 4rem auto 2rem;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.contribute-card {
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.contribute-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.contribute-card > p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.contribute-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contribute-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.contribute-item p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.contribute-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: var(--text);
+  color: var(--bg);
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contribute-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.github-icon {
+  flex-shrink: 0;
+}
+
+.contribute-note {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+@media (prefers-color-scheme: dark) {
+  .contribute-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contribute-btn {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contribute-btn:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 640px) {
+  .contribute-card {
+    padding: 1.5rem;
+  }
+  
+  .contribute-card h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contribute-actions {
+    gap: 1.5rem;
+  }
+  
+  .contribute-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
 footer {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem 2rem;
   border-top: 1px solid var(--border);
-  margin-top: 4rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
 }
 
 footer a {
@@ -494,10 +608,8 @@ footer a {
 }
 
 .disclaimer {
-  margin-top: 2rem;
-  padding: 1.25rem;
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 1rem;
   background: var(--bg);
   font-size: 0.75rem;
   max-width: 1200px;
