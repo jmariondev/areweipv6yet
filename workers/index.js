@@ -13,12 +13,17 @@ export default {
       return Response.redirect(primaryUrl.toString(), 301);
     }
     
-    // Redirect root to index.html
-    if (url.pathname === '/') {
-      return env.ASSETS.fetch(new Request(new URL('/index.html', request.url).toString(), request));
+    try {
+      // Redirect root to index.html
+      if (url.pathname === '/') {
+        return await env.ASSETS.fetch(new Request(new URL('/index.html', request.url).toString(), request));
+      }
+      
+      // Serve all other assets directly
+      return await env.ASSETS.fetch(request);
+    } catch (e) {
+      // Return 404 for any errors (including missing files)
+      return new Response('Not found', { status: 404 });
     }
-    
-    // Serve all other assets directly
-    return env.ASSETS.fetch(request);
   }
 };
