@@ -65,7 +65,7 @@ async function main() {
       <div class="service-tests">
         ${service.ipv6.tests.filter(test => test.result !== null).map(test => {
           const testClass = test.result === true ? 'test-pass' : test.result === false ? 'test-fail' : 'test-unknown';
-          const isSecondary = test.id === 'www_variant' ? 'test-secondary' : '';
+          const isSecondary = (test.id === 'www_variant' || test.id === 'www_domain') ? 'test-secondary' : '';
           const icon = test.result === true ? '✅' : test.result === false ? '❌' : '❓';
           
           return `

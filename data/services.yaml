@@ -11,16 +11,16 @@ services:
     ipv6:
       status: full
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
       notes: Full IPv6 support across all services
-      last_checked: '2025-09-03T08:51:50.883Z'
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: youtube
     name: YouTube
     url: https://www.youtube.com
@@ -28,16 +28,16 @@ services:
     ipv6:
       status: full
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
       notes: Complete IPv6 support
-      last_checked: '2025-09-03T08:51:51.296Z'
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: facebook
     name: Facebook
     url: https://www.facebook.com
@@ -45,16 +45,16 @@ services:
     ipv6:
       status: full
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
       notes: IPv6 enabled globally
-      last_checked: '2025-09-03T08:51:51.510Z'
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: wikipedia
     name: Wikipedia
     url: https://www.wikipedia.org
@@ -62,16 +62,16 @@ services:
     ipv6:
       status: full
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
       notes: Full IPv6 support
-      last_checked: '2025-09-03T08:51:51.538Z'
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: netflix
     name: Netflix
     url: https://www.netflix.com
@@ -79,16 +79,16 @@ services:
     ipv6:
       status: full
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
       notes: Full IPv6 support, works with ISPs that provide IPv6
-      last_checked: '2025-09-03T08:51:51.783Z'
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: reddit
     name: Reddit
     url: https://www.reddit.com
@@ -96,16 +96,16 @@ services:
     ipv6:
       status: partial
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
-          result: false
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: WWW variant supports IPv6, but main domain connectivity fails
-      last_checked: '2025-09-03T08:51:51.808Z'
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
+          result: false
+      notes: reddit.com supports IPv6, but www.reddit.com does not
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: discord
     name: Discord
     url: https://discord.com
@@ -113,16 +113,16 @@ services:
     ipv6:
       status: none
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
       notes: No IPv6 support on main service or voice servers
-      last_checked: '2025-09-03T08:51:51.820Z'
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: steam
     name: Steam
     url: https://store.steampowered.com
@@ -130,16 +130,16 @@ services:
     ipv6:
       status: none
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
         - id: www_variant
           name: WWW Variant
           description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: null
       notes: No IPv6 support for store or CDN
-      last_checked: '2025-09-03T08:51:51.890Z'
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: github
     name: GitHub
     url: https://github.com
@@ -147,16 +147,16 @@ services:
     ipv6:
       status: none
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
       notes: No IPv6 support (as of 2025)
-      last_checked: '2025-09-03T08:51:51.897Z'
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: x
     name: X (Twitter)
     url: https://x.com
@@ -164,16 +164,16 @@ services:
     ipv6:
       status: none
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
       notes: No IPv6 support
-      last_checked: '2025-09-03T08:51:51.904Z'
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: amazon
     name: Amazon Shopping
     url: https://www.amazon.com
@@ -181,16 +181,16 @@ services:
     ipv6:
       status: partial
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
-          result: true
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-      notes: Main domain supports IPv6, but www variant does not work over IPv6
-      last_checked: '2025-09-03T08:51:52.018Z'
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
+          result: true
+      notes: www.amazon.com supports IPv6, but amazon.com (apex) does not
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: duckduckgo
     name: DuckDuckGo
     url: https://duckduckgo.com
@@ -198,16 +198,16 @@ services:
     ipv6:
       status: none
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
       notes: No IPv6 support
-      last_checked: '2025-09-03T08:51:52.024Z'
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: spotify
     name: Spotify
     url: https://www.spotify.com
@@ -215,16 +215,16 @@ services:
     ipv6:
       status: full
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: Full IPv6 support (both main domain and www variant work over IPv6)
-      last_checked: '2025-09-03T08:51:52.189Z'
+      notes: Full IPv6 support on both spotify.com and www.spotify.com
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: twitch
     name: Twitch
     url: https://www.twitch.tv
@@ -232,16 +232,16 @@ services:
     ipv6:
       status: none
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: false
       notes: No IPv6 connectivity (both main domain and www variant fail to connect)
-      last_checked: '2025-09-03T08:51:52.210Z'
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: aws
     name: Amazon Web Services
     url: https://aws.amazon.com
@@ -249,50 +249,50 @@ services:
     ipv6:
       status: full
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_variant
           name: WWW Variant
           description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: null
       notes: AWS console supports IPv6 (both main domain and www variant work)
-      last_checked: '2025-09-03T08:51:52.289Z'
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: gcp
     name: Google Cloud Platform
     url: https://cloud.google.com
     description: Google's cloud computing services
     ipv6:
-      status: partial
+      status: full
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
         - id: www_variant
           name: WWW Variant
           description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: null
-      notes: Main domain supports IPv6, but www variant does not work
-      last_checked: '2025-09-03T08:51:52.623Z'
+      notes: Full IPv6 support on cloud.google.com
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: azure
     name: Microsoft Azure
     url: https://azure.microsoft.com
     description: Microsoft's cloud computing platform
     ipv6:
-      status: partial
+      status: full
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses
-          result: false
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
+          result: true
         - id: www_variant
           name: WWW Variant
           description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: null
-      notes: WWW variant supports IPv6, but main domain does not work
-      last_checked: '2025-09-03T08:51:57.689Z'
+      notes: Full IPv6 support on azure.microsoft.com
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: cloudflare
     name: Cloudflare
     url: https://www.cloudflare.com
@@ -300,16 +300,16 @@ services:
     ipv6:
       status: full
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
       notes: Full IPv6 support (both main domain and www variant work)
-      last_checked: '2025-09-03T08:51:58.220Z'
+      last_checked: '2025-09-04T06:53:48.993Z'
   - id: digitalocean
     name: DigitalOcean
     url: https://www.digitalocean.com
@@ -317,13 +317,13 @@ services:
     ipv6:
       status: full
       tests:
-        - id: aaaa_record
-          name: IPv6 Address
-          description: Main domain has IPv6 addresses
+        - id: apex_domain
+          name: Apex Domain
+          description: Apex domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-        - id: www_variant
-          name: WWW Variant
-          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
+        - id: www_domain
+          name: WWW Domain
+          description: WWW domain works over IPv6 (both DNS and HTTP connectivity)
           result: true
-      notes: Full IPv6 support (both main domain and www variant work over IPv6)
-      last_checked: '2025-09-03T08:51:58.355Z'
+      notes: Full IPv6 support on both digitalocean.com and www.digitalocean.com
+      last_checked: '2025-09-04T06:53:48.993Z'
