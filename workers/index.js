@@ -15,8 +15,9 @@ export default {
     // Define primary domain (without www)
     const primaryDomain = 'areweipv6yet.com';
     
-    // Redirect all non-primary domains and all www variants to primary apex domain
-    if (url.hostname !== primaryDomain) {
+    // Only redirect to primary domain if ENFORCE_DOMAIN is set to true
+    // This allows local development to work without redirects
+    if (env.ENFORCE_DOMAIN === 'true' && url.hostname !== primaryDomain) {
       // Redirect to primary apex domain, preserving path and query string
       const primaryUrl = new URL(url);
       primaryUrl.hostname = primaryDomain;

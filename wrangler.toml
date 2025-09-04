@@ -36,5 +36,11 @@ zone_name = "arewev6yet.com"
 pattern = "www.arewev6yet.com/*"
 zone_name = "arewev6yet.com"
 
+# Local development - no domain enforcement
+[vars]
+ENFORCE_DOMAIN = "false"
+
 [env.production]
 name = "areweipv6yet-production"
+[env.production.vars]
+ENFORCE_DOMAIN = "true"

@@ -52,23 +52,51 @@
   
   <main>
     <section class="summary">
+      <div class="progress-container">
+        <h2 class="progress-title">IPv6 Adoption Progress</h2>
+        <p class="progress-note">(among the services we track!)</p>
+        <div class="progress-bar">
+          <div class="progress-segment progress-full" style="width: {{PERCENT_FULL}}%" title="Full Support: {{STATS_FULL}} services ({{PERCENT_FULL}}%)">
+            <span class="progress-label">{{STATS_FULL}}</span>
+          </div>
+          <div class="progress-segment progress-partial" style="width: {{PERCENT_PARTIAL}}%" title="Partial Support: {{STATS_PARTIAL}} services ({{PERCENT_PARTIAL}}%)">
+            <span class="progress-label">{{STATS_PARTIAL}}</span>
+          </div>
+          <div class="progress-segment progress-none" style="width: {{PERCENT_NONE}}%" title="No Support: {{STATS_NONE}} services ({{PERCENT_NONE}}%)">
+            <span class="progress-label">{{STATS_NONE}}</span>
+          </div>
+          {{UNKNOWN_SEGMENT}}
+        </div>
+        <div class="progress-legend">
+          <div class="legend-item">
+            <span class="legend-color legend-full"></span>
+            <span>Full ({{PERCENT_FULL}}%)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color legend-partial"></span>
+            <span>Partial ({{PERCENT_PARTIAL}}%)</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-color legend-none"></span>
+            <span>None ({{PERCENT_NONE}}%)</span>
+          </div>
+          {{UNKNOWN_LEGEND}}
+        </div>
+      </div>
       <div class="stats">
-        <div class="stat">
+        <div class="stat stat-full">
           <span class="stat-number">{{STATS_FULL}}</span>
           <span class="stat-label">Full Support</span>
         </div>
-        <div class="stat">
+        <div class="stat stat-partial">
           <span class="stat-number">{{STATS_PARTIAL}}</span>
           <span class="stat-label">Partial Support</span>
         </div>
-        <div class="stat">
+        <div class="stat stat-none">
           <span class="stat-number">{{STATS_NONE}}</span>
           <span class="stat-label">No Support</span>
         </div>
-        <div class="stat">
-          <span class="stat-number">{{STATS_UNKNOWN}}</span>
-          <span class="stat-label">Unknown</span>
-        </div>
+        {{UNKNOWN_STAT}}
       </div>
     </section>
     
@@ -79,7 +107,7 @@
         <button class="filter-btn" data-filter="full">✅ Full</button>
         <button class="filter-btn" data-filter="partial">🟨 Partial</button>
         <button class="filter-btn" data-filter="none">❌ None</button>
-        <button class="filter-btn" data-filter="unknown">❓ Unknown</button>
+        {{UNKNOWN_FILTER}}
       </div>
     </section>
     

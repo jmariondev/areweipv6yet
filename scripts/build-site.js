@@ -35,6 +35,14 @@ async function main() {
     unknown: data.services.filter(s => s.ipv6.status === 'unknown').length
   };
   
+  // Calculate percentages for the progress bar
+  const percentages = {
+    full: Math.round((stats.full / stats.total) * 100),
+    partial: Math.round((stats.partial / stats.total) * 100),
+    none: Math.round((stats.none / stats.total) * 100),
+    unknown: Math.round((stats.unknown / stats.total) * 100)
+  };
+  
   // Read template
   const template = await fs.readFile('site/src/index.html', 'utf8');
   
@@ -81,14 +89,46 @@ async function main() {
     </div>`;
   }).join('\n');
   
+  // Generate unknown segment HTML only if there are unknown services
+  const unknownSegmentHtml = stats.unknown > 0 ? `
+    <div class="progress-segment progress-unknown" style="width: ${percentages.unknown}%" title="Unknown: ${stats.unknown} services (${percentages.unknown}%)">
+      <span class="progress-label">${stats.unknown}</span>
+    </div>` : '';
+  
+  // Generate unknown stat HTML only if there are unknown services
+  const unknownStatHtml = stats.unknown > 0 ? `
+    <div class="stat stat-unknown">
+      <span class="stat-number">${stats.unknown}</span>
+      <span class="stat-label">Unknown</span>
+    </div>` : '';
+  
+  // Generate unknown legend item HTML only if there are unknown services
+  const unknownLegendHtml = stats.unknown > 0 ? `
+    <div class="legend-item">
+      <span class="legend-color legend-unknown"></span>
+      <span>Unknown (${percentages.unknown}%)</span>
+    </div>` : '';
+  
+  // Generate unknown filter button only if there are unknown services
+  const unknownFilterHtml = stats.unknown > 0 ? `
+    <button class="filter-btn" data-filter="unknown">❓ Unknown</button>` : '';
+  
   // Replace placeholders
   let html = template
     .replace('{{SERVICES}}', servicesHtml)
     .replace('{{STATS_TOTAL}}', stats.total)
-    .replace('{{STATS_FULL}}', stats.full)
-    .replace('{{STATS_PARTIAL}}', stats.partial)
-    .replace('{{STATS_NONE}}', stats.none)
-    .replace('{{STATS_UNKNOWN}}', stats.unknown)
+    .replaceAll('{{STATS_FULL}}', stats.full)
+    .replaceAll('{{STATS_PARTIAL}}', stats.partial)
+    .replaceAll('{{STATS_NONE}}', stats.none)
+    .replaceAll('{{STATS_UNKNOWN}}', stats.unknown)
+    .replaceAll('{{PERCENT_FULL}}', percentages.full)
+    .replaceAll('{{PERCENT_PARTIAL}}', percentages.partial)
+    .replaceAll('{{PERCENT_NONE}}', percentages.none)
+    .replaceAll('{{PERCENT_UNKNOWN}}', percentages.unknown)
+    .replace('{{UNKNOWN_SEGMENT}}', unknownSegmentHtml)
+    .replace('{{UNKNOWN_STAT}}', unknownStatHtml)
+    .replace('{{UNKNOWN_LEGEND}}', unknownLegendHtml)
+    .replace('{{UNKNOWN_FILTER}}', unknownFilterHtml)
     .replaceAll('{{LAST_UPDATED}}', new Date().toISOString());
   
   // Ensure dist directory exists
