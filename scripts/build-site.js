@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import { minify as minifyHtml } from 'html-minifier-terser';
 import { minify as minifyCss } from 'csso';
 import { minify as minifyJs } from 'terser';
+import crypto from 'crypto';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -112,8 +113,23 @@ async function main() {
     mangle: true
   });
   
-  // Write minified output files
-  await fs.writeFile('site/dist/index.html', minifiedHtml);
+  // Generate SRI hashes for CSS and JS
+  const cssHash = crypto.createHash('sha384').update(minifiedCss).digest('base64');
+  const jsHash = crypto.createHash('sha384').update(minifiedJs.code).digest('base64');
+  
+  // Add SRI attributes to HTML
+  const htmlWithSri = minifiedHtml
+    .replace(
+      '<link rel="stylesheet" href="style.css">',
+      `<link rel="stylesheet" href="style.css" integrity="sha384-${cssHash}" crossorigin="anonymous">`
+    )
+    .replace(
+      '<script src="script.js"></script>',
+      `<script src="script.js" integrity="sha384-${jsHash}" crossorigin="anonymous"></script>`
+    );
+  
+  // Write minified output files with SRI
+  await fs.writeFile('site/dist/index.html', htmlWithSri);
   await fs.writeFile('site/dist/style.css', minifiedCss);
   await fs.writeFile('site/dist/script.js', minifiedJs.code);
   
@@ -154,7 +170,7 @@ async function main() {
   };
   
   const minifiedSizes = {
-    html: Buffer.byteLength(minifiedHtml),
+    html: Buffer.byteLength(htmlWithSri),
     css: Buffer.byteLength(minifiedCss),
     js: Buffer.byteLength(minifiedJs.code)
   };
@@ -164,6 +180,7 @@ async function main() {
   console.log(`  HTML: ${originalSizes.html} → ${minifiedSizes.html} bytes (${Math.round((1 - minifiedSizes.html/originalSizes.html) * 100)}% reduction)`);
   console.log(`  CSS:  ${originalSizes.css} → ${minifiedSizes.css} bytes (${Math.round((1 - minifiedSizes.css/originalSizes.css) * 100)}% reduction)`);
   console.log(`  JS:   ${originalSizes.js} → ${minifiedSizes.js} bytes (${Math.round((1 - minifiedSizes.js/originalSizes.js) * 100)}% reduction)`);
+  console.log('🔒 SRI hashes generated for security');
 }
 
 main().catch(console.error);
