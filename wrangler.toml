@@ -1,9 +1,7 @@
 name = "areweipv6yet"
 main = "workers/index.js"
 compatibility_date = "2024-01-01"
-
-[site]
-bucket = "./site/dist"
+assets = { directory = "./site/dist" }
 
 [[routes]]
 pattern = "areweipv6yet.com/*"
@@ -13,8 +11,30 @@ zone_name = "areweipv6yet.com"
 pattern = "www.areweipv6yet.com/*"
 zone_name = "areweipv6yet.com"
 
+# Redirect domains
+[[routes]]
+pattern = "areweipv6yet.net/*"
+zone_name = "areweipv6yet.net"
+
+[[routes]]
+pattern = "www.areweipv6yet.net/*"
+zone_name = "areweipv6yet.net"
+
+[[routes]]
+pattern = "areweipv6yet.org/*"
+zone_name = "areweipv6yet.org"
+
+[[routes]]
+pattern = "www.areweipv6yet.org/*"
+zone_name = "areweipv6yet.org"
+
+[[routes]]
+pattern = "arewev6yet.com/*"
+zone_name = "arewev6yet.com"
+
+[[routes]]
+pattern = "www.arewev6yet.com/*"
+zone_name = "arewev6yet.com"
+
 [env.production]
 name = "areweipv6yet-production"
-
-[env.staging]
-name = "areweipv6yet-staging"

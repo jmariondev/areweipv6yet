@@ -15,8 +15,5 @@
     "ajv-formats": "^2.1.1",
     "js-yaml": "^4.1.0",
     "wrangler": "^3.0.0"
-  },
-  "dependencies": {
-    "@cloudflare/kv-asset-handler": "^0.4.0"
   }
 }
