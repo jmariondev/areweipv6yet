@@ -7,470 +7,323 @@ services:
   - id: google
     name: Google
     url: https://www.google.com
-    category: search
     description: Search engine and technology company
     ipv6:
       status: full
-      notes: Full IPv6 support across all services
-      last_checked: '2025-09-03T08:51:50.883Z'
-      last_manual_verification: '2024-01-15T10:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: true
-          last_checked: '2025-09-03T07:44:19.388Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: true
-          last_checked: '2025-09-03T08:31:32.527Z'
+      notes: Full IPv6 support across all services
+      last_checked: '2025-09-03T08:51:50.883Z'
   - id: youtube
     name: YouTube
     url: https://www.youtube.com
-    category: video
     description: Video sharing platform
     ipv6:
       status: full
-      notes: Complete IPv6 support
-      last_checked: '2025-09-03T08:51:51.296Z'
-      last_manual_verification: '2024-01-15T10:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: true
-          last_checked: '2025-09-03T07:44:19.390Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: true
-          last_checked: '2025-09-03T08:31:32.621Z'
+      notes: Complete IPv6 support
+      last_checked: '2025-09-03T08:51:51.296Z'
   - id: facebook
     name: Facebook
     url: https://www.facebook.com
-    category: social
     description: Social networking platform
     ipv6:
       status: full
-      notes: IPv6 enabled globally
-      last_checked: '2025-09-03T08:51:51.510Z'
-      last_manual_verification: '2024-01-15T10:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: true
-          last_checked: '2025-09-03T07:44:19.391Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: true
-          last_checked: '2025-09-03T08:31:32.728Z'
+      notes: IPv6 enabled globally
+      last_checked: '2025-09-03T08:51:51.510Z'
   - id: wikipedia
     name: Wikipedia
     url: https://www.wikipedia.org
-    category: reference
     description: Free online encyclopedia
     ipv6:
       status: full
-      notes: Full IPv6 support
-      last_checked: '2025-09-03T08:51:51.538Z'
-      last_manual_verification: '2024-01-15T10:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: true
-          last_checked: '2025-09-03T07:44:19.391Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: true
-          last_checked: '2025-09-03T08:31:32.755Z'
+      notes: Full IPv6 support
+      last_checked: '2025-09-03T08:51:51.538Z'
   - id: netflix
     name: Netflix
     url: https://www.netflix.com
-    category: streaming
     description: Subscription-based video streaming service
     ipv6:
       status: full
-      notes: Full IPv6 support, works with ISPs that provide IPv6
-      last_checked: '2025-09-03T08:51:51.783Z'
-      last_manual_verification: '2025-09-03T07:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: true
-          last_checked: '2025-09-03T07:44:19.407Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: true
-          last_checked: '2025-09-03T08:31:33.000Z'
+      notes: Full IPv6 support, works with ISPs that provide IPv6
+      last_checked: '2025-09-03T08:51:51.783Z'
   - id: reddit
     name: Reddit
     url: https://www.reddit.com
-    category: social
     description: Social news aggregation and discussion platform
     ipv6:
       status: partial
-      notes: WWW variant supports IPv6, but main domain connectivity fails
-      last_checked: '2025-09-03T08:51:51.808Z'
-      last_manual_verification: '2025-09-03T07:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: false
-          last_checked: '2025-09-03T08:42:40.288Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: true
-          last_checked: '2025-09-03T08:31:33.038Z'
+      notes: WWW variant supports IPv6, but main domain connectivity fails
+      last_checked: '2025-09-03T08:51:51.808Z'
   - id: discord
     name: Discord
     url: https://discord.com
-    category: communication
     description: Voice, video, and text chat platform for communities
     ipv6:
       status: none
-      notes: No IPv6 support on main service or voice servers
-      last_checked: '2025-09-03T08:51:51.820Z'
-      last_manual_verification: '2025-09-03T07:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: false
-          last_checked: '2025-09-03T07:44:19.632Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: false
-          last_checked: '2025-09-03T08:31:33.055Z'
+      notes: No IPv6 support on main service or voice servers
+      last_checked: '2025-09-03T08:51:51.820Z'
   - id: steam
     name: Steam
     url: https://store.steampowered.com
-    category: gaming
     description: Digital distribution platform for games
     ipv6:
       status: none
-      notes: No IPv6 support for store or CDN
-      last_checked: '2025-09-03T08:51:51.890Z'
-      last_manual_verification: '2024-01-15T10:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: false
-          last_checked: '2025-09-03T07:44:19.916Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: null
-          last_checked: '2025-09-03T08:51:51.890Z'
+      notes: No IPv6 support for store or CDN
+      last_checked: '2025-09-03T08:51:51.890Z'
   - id: github
     name: GitHub
     url: https://github.com
-    category: development
     description: Code hosting, version control, and collaboration platform
     ipv6:
       status: none
-      notes: No IPv6 support (as of 2025)
-      last_checked: '2025-09-03T08:51:51.897Z'
-      last_manual_verification: '2025-09-03T07:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: false
-          last_checked: '2025-09-03T07:44:20.154Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: false
-          last_checked: '2025-09-03T08:31:33.099Z'
+      notes: No IPv6 support (as of 2025)
+      last_checked: '2025-09-03T08:51:51.897Z'
   - id: x
     name: X (Twitter)
     url: https://x.com
-    category: social
     description: Microblogging platform
     ipv6:
       status: none
-      notes: No IPv6 support
-      last_checked: '2025-09-03T08:51:51.904Z'
-      last_manual_verification: '2024-01-15T10:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: false
-          last_checked: '2025-09-03T07:44:20.406Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: false
-          last_checked: '2025-09-03T08:31:33.135Z'
+      notes: No IPv6 support
+      last_checked: '2025-09-03T08:51:51.904Z'
   - id: amazon
     name: Amazon Shopping
     url: https://www.amazon.com
-    category: shopping
     description: E-commerce marketplace
     ipv6:
       status: partial
-      notes: Main domain supports IPv6, but www variant does not work over IPv6
-      last_checked: '2025-09-03T08:51:52.018Z'
-      last_manual_verification: '2025-09-03T07:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: true
-          last_checked: '2025-09-03T07:44:20.754Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: false
-          last_checked: '2025-09-03T08:31:33.182Z'
+      notes: Main domain supports IPv6, but www variant does not work over IPv6
+      last_checked: '2025-09-03T08:51:52.018Z'
   - id: duckduckgo
     name: DuckDuckGo
     url: https://duckduckgo.com
-    category: search
     description: Privacy-focused search engine
     ipv6:
       status: none
-      notes: No IPv6 support
-      last_checked: '2025-09-03T08:51:52.024Z'
-      last_manual_verification: '2024-01-15T10:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: false
-          last_checked: '2025-09-03T07:44:21.071Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: false
-          last_checked: '2025-09-03T08:31:33.190Z'
+      notes: No IPv6 support
+      last_checked: '2025-09-03T08:51:52.024Z'
   - id: spotify
     name: Spotify
     url: https://www.spotify.com
-    category: streaming
     description: Music streaming service
     ipv6:
       status: full
-      notes: Full IPv6 support (both main domain and www variant work over IPv6)
-      last_checked: '2025-09-03T08:51:52.189Z'
-      last_manual_verification: '2025-09-03T07:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: true
-          last_checked: '2025-09-03T07:44:21.206Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: true
-          last_checked: '2025-09-03T08:31:33.292Z'
+      notes: Full IPv6 support (both main domain and www variant work over IPv6)
+      last_checked: '2025-09-03T08:51:52.189Z'
   - id: twitch
     name: Twitch
     url: https://www.twitch.tv
-    category: streaming
     description: Live streaming platform for gaming and creative content
     ipv6:
       status: none
-      notes: No IPv6 connectivity (both main domain and www variant fail to connect)
-      last_checked: '2025-09-03T08:51:52.210Z'
-      last_manual_verification: '2025-09-03T07:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
-          description: >-
-            Main domain has IPv6 addresses (AAAA records) - required for IPv6
-            connectivity
+          description: Main domain has IPv6 addresses (AAAA records) - required for IPv6 connectivity
           result: false
-          last_checked: '2025-09-03T08:42:40.573Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: false
-          last_checked: '2025-09-03T08:31:33.306Z'
+      notes: No IPv6 connectivity (both main domain and www variant fail to connect)
+      last_checked: '2025-09-03T08:51:52.210Z'
   - id: aws
     name: Amazon Web Services
     url: https://aws.amazon.com
-    type: cloud
-    category: cloud
     description: Leading cloud computing platform
     ipv6:
       status: full
-      notes: AWS console supports IPv6 (both main domain and www variant work)
-      last_checked: '2025-09-03T08:51:52.289Z'
-      last_manual_verification: '2025-09-03T08:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
           description: Main domain has IPv6 addresses
           result: true
-          last_checked: '2025-09-03T08:00:00Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: null
-          last_checked: '2025-09-03T08:51:52.289Z'
+      notes: AWS console supports IPv6 (both main domain and www variant work)
+      last_checked: '2025-09-03T08:51:52.289Z'
   - id: gcp
     name: Google Cloud Platform
     url: https://cloud.google.com
-    type: cloud
-    category: cloud
     description: Google's cloud computing services
     ipv6:
       status: partial
-      notes: Main domain supports IPv6, but www variant does not work
-      last_checked: '2025-09-03T08:51:52.623Z'
-      last_manual_verification: '2025-09-03T08:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
           description: Main domain has IPv6 addresses
           result: true
-          last_checked: '2025-09-03T08:00:00Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: null
-          last_checked: '2025-09-03T08:51:52.623Z'
+      notes: Main domain supports IPv6, but www variant does not work
+      last_checked: '2025-09-03T08:51:52.623Z'
   - id: azure
     name: Microsoft Azure
     url: https://azure.microsoft.com
-    type: cloud
-    category: cloud
     description: Microsoft's cloud computing platform
     ipv6:
       status: partial
-      notes: WWW variant supports IPv6, but main domain does not work
-      last_checked: '2025-09-03T08:51:57.689Z'
-      last_manual_verification: '2025-09-03T08:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
           description: Main domain has IPv6 addresses
           result: false
-          last_checked: '2025-09-03T08:42:46.033Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: null
-          last_checked: '2025-09-03T08:51:57.689Z'
+      notes: WWW variant supports IPv6, but main domain does not work
+      last_checked: '2025-09-03T08:51:57.689Z'
   - id: cloudflare
     name: Cloudflare
     url: https://www.cloudflare.com
-    type: cloud
-    category: cloud
     description: Web infrastructure and security services
     ipv6:
       status: full
-      notes: Full IPv6 support (both main domain and www variant work)
-      last_checked: '2025-09-03T08:51:58.220Z'
-      last_manual_verification: '2025-09-03T08:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
           description: Main domain has IPv6 addresses
           result: true
-          last_checked: '2025-09-03T08:00:00Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: true
-          last_checked: '2025-09-03T08:31:33.766Z'
+      notes: Full IPv6 support (both main domain and www variant work)
+      last_checked: '2025-09-03T08:51:58.220Z'
   - id: digitalocean
     name: DigitalOcean
     url: https://www.digitalocean.com
-    type: cloud
-    category: cloud
     description: Developer-friendly cloud platform
     ipv6:
       status: full
-      notes: Full IPv6 support (both main domain and www variant work over IPv6)
-      last_checked: '2025-09-03T08:51:58.355Z'
-      last_manual_verification: '2025-09-03T08:00:00Z'
       tests:
         - id: aaaa_record
           name: IPv6 Address
           description: Main domain has IPv6 addresses
           result: true
-          last_checked: '2025-09-03T08:31:33.938Z'
         - id: www_variant
           name: WWW Variant
-          description: >-
-            Alternative www/non-www hostname works over IPv6 (both DNS and HTTP
-            connectivity)
+          description: Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)
           result: true
-          last_checked: '2025-09-03T08:31:33.938Z'
+      notes: Full IPv6 support (both main domain and www variant work over IPv6)
+      last_checked: '2025-09-03T08:51:58.355Z'

@@ -7,17 +7,11 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "name", "url", "category", "ipv6"],
+        "required": ["id", "name", "url", "ipv6"],
         "properties": {
           "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
           "name": { "type": "string" },
           "url": { "type": "string", "format": "uri" },
-          "type": { 
-            "type": "string", 
-            "enum": ["service", "cloud"],
-            "default": "service"
-          },
-          "category": { "type": "string" },
           "description": { "type": "string" },
           "ipv6": {
             "type": "object",
@@ -33,14 +27,12 @@
                     "id": { "type": "string" },
                     "name": { "type": "string" },
                     "description": { "type": "string" },
-                    "result": { "type": ["boolean", "null"] },
-                    "last_checked": { "type": ["string", "null"] }
+                    "result": { "type": ["boolean", "null"] }
                   }
                 }
               },
               "notes": { "type": "string" },
-              "last_checked": { "type": ["string", "null"] },
-              "last_manual_verification": { "type": ["string", "null"] }
+              "last_checked": { "type": ["string", "null"] }
             }
           }
         }

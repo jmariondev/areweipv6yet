@@ -206,8 +206,7 @@ async function main() {
         id: 'aaaa_record',
         name: 'IPv6 Address',
         description: 'Main domain works over IPv6 (both DNS and HTTP connectivity)',
-        result: null,
-        last_checked: null
+        result: null
       };
       service.ipv6.tests.push(aaaaTest);
     }
@@ -217,8 +216,7 @@ async function main() {
         id: 'www_variant',
         name: 'WWW Variant',
         description: 'Alternative www/non-www hostname works over IPv6 (both DNS and HTTP connectivity)',
-        result: null,
-        last_checked: null
+        result: null
       };
       service.ipv6.tests.push(wwwTest);
     }
@@ -227,7 +225,6 @@ async function main() {
     const mainWorks = dnsInfo.hasAAAA && dnsInfo.mainHTTP.success;
     if (aaaaTest.result !== mainWorks) {
       aaaaTest.result = mainWorks;
-      aaaaTest.last_checked = now;
       serviceUpdated = true;
       console.log(`  → Main: ${mainWorks} (DNS: ${dnsInfo.hasAAAA}, HTTP: ${dnsInfo.mainHTTP.success})`);
     }
@@ -237,7 +234,6 @@ async function main() {
                      (dnsInfo.wwwVariant.hasAAAA && dnsInfo.wwwVariant.httpWorks);
     if (wwwTest.result !== wwwWorks) {
       wwwTest.result = wwwWorks;
-      wwwTest.last_checked = now;
       serviceUpdated = true;
       const status = wwwWorks === null ? 'skipped' : wwwWorks;
       console.log(`  → WWW: ${status} (${dnsInfo.wwwVariant.hostname})`);
