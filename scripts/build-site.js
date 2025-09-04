@@ -2,6 +2,9 @@ import { promises as fs } from 'fs';
 import yaml from 'js-yaml';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { minify as minifyHtml } from 'html-minifier-terser';
+import { minify as minifyCss } from 'csso';
+import { minify as minifyJs } from 'terser';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -86,10 +89,33 @@ async function main() {
   // Ensure dist directory exists
   await fs.mkdir('site/dist', { recursive: true });
   
-  // Write output files
-  await fs.writeFile('site/dist/index.html', html);
-  await fs.copyFile('site/src/style.css', 'site/dist/style.css');
-  await fs.copyFile('site/src/script.js', 'site/dist/script.js');
+  // Minify HTML
+  const minifiedHtml = await minifyHtml(html, {
+    collapseWhitespace: true,
+    removeComments: true,
+    removeRedundantAttributes: true,
+    removeScriptTypeAttributes: true,
+    removeStyleLinkTypeAttributes: true,
+    useShortDoctype: true,
+    minifyCSS: true,
+    minifyJS: true
+  });
+  
+  // Minify CSS
+  const cssContent = await fs.readFile('site/src/style.css', 'utf8');
+  const minifiedCss = minifyCss(cssContent).css;
+  
+  // Minify JavaScript
+  const jsContent = await fs.readFile('site/src/script.js', 'utf8');
+  const minifiedJs = await minifyJs(jsContent, {
+    compress: true,
+    mangle: true
+  });
+  
+  // Write minified output files
+  await fs.writeFile('site/dist/index.html', minifiedHtml);
+  await fs.writeFile('site/dist/style.css', minifiedCss);
+  await fs.writeFile('site/dist/script.js', minifiedJs.code);
   
   // Copy robots.txt and humans.txt if they exist
   try {
@@ -120,7 +146,24 @@ async function main() {
   // Generate API JSON
   await fs.writeFile('site/dist/api.json', JSON.stringify(data, null, 2));
   
+  // Calculate size reductions
+  const originalSizes = {
+    html: Buffer.byteLength(html),
+    css: Buffer.byteLength(cssContent),
+    js: Buffer.byteLength(jsContent)
+  };
+  
+  const minifiedSizes = {
+    html: Buffer.byteLength(minifiedHtml),
+    css: Buffer.byteLength(minifiedCss),
+    js: Buffer.byteLength(minifiedJs.code)
+  };
+  
   console.log('✅ Site built successfully');
+  console.log('📦 Minification results:');
+  console.log(`  HTML: ${originalSizes.html} → ${minifiedSizes.html} bytes (${Math.round((1 - minifiedSizes.html/originalSizes.html) * 100)}% reduction)`);
+  console.log(`  CSS:  ${originalSizes.css} → ${minifiedSizes.css} bytes (${Math.round((1 - minifiedSizes.css/originalSizes.css) * 100)}% reduction)`);
+  console.log(`  JS:   ${originalSizes.js} → ${minifiedSizes.js} bytes (${Math.round((1 - minifiedSizes.js/originalSizes.js) * 100)}% reduction)`);
 }
 
 main().catch(console.error);
