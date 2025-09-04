@@ -162,6 +162,15 @@ async function main() {
   // Generate API JSON
   await fs.writeFile('site/dist/api.json', JSON.stringify(data, null, 2));
   
+  // Generate sitemap with current date
+  try {
+    const sitemapTemplate = await fs.readFile('site/src/sitemap.xml', 'utf8');
+    const sitemap = sitemapTemplate.replace(/{{LAST_UPDATED}}/g, new Date().toISOString().split('T')[0]);
+    await fs.writeFile('site/dist/sitemap.xml', sitemap);
+  } catch (e) {
+    // Sitemap doesn't exist, ignore
+  }
+  
   // Calculate size reductions
   const originalSizes = {
     html: Buffer.byteLength(html),

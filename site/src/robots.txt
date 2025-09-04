@@ -3,6 +3,7 @@
 
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
-# Sitemap location (if we add one later)
-# Sitemap: https://areweipv6yet.com/sitemap.xml
+# Sitemap location
+Sitemap: https://areweipv6yet.com/sitemap.xml
