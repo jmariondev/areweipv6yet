@@ -1,0 +1,130 @@
+name: Update IPv6 Status
+description: Report a change in a service's IPv6 support status
+title: "[Update] "
+labels: ["status-update", "needs-verification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Help us keep the tracker up to date! Use this form to report changes in IPv6 support.
+        
+  - type: input
+    id: service-name
+    attributes:
+      label: Service Name
+      description: Which service are you reporting about?
+      placeholder: "e.g., Discord, Netflix, GitHub"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: current-status
+    attributes:
+      label: Current Status (on website)
+      description: What status does the tracker currently show?
+      options:
+        - "Unknown"
+        - "None - No IPv6 support"
+        - "Partial - Some features work on IPv6"
+        - "Full - Complete IPv6 support"
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: new-status
+    attributes:
+      label: New Status (actual)
+      description: What should the status be updated to?
+      options:
+        - "None - No IPv6 support"
+        - "Partial - Some features work on IPv6"
+        - "Full - Complete IPv6 support"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: what-changed
+    attributes:
+      label: What Changed?
+      description: |
+        Please describe what has changed:
+        - Did they add IPv6 support?
+        - Did they remove IPv6 support?
+        - Did support level change (e.g., partial to full)?
+        - Which specific features/domains are affected?
+      placeholder: |
+        The service now has...
+    validations:
+      required: true
+      
+  - type: input
+    id: date-discovered
+    attributes:
+      label: When did you discover this change?
+      description: Approximate date when you noticed the change
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: test-results
+    attributes:
+      label: Test Results
+      description: |
+        Please provide your testing details:
+        - DNS lookup results (dig, nslookup)
+        - Connection tests
+        - Which parts work/don't work on IPv6
+        - Testing methodology
+      placeholder: |
+        ```
+        $ dig AAAA example.com
+        ...
+        ```
+    validations:
+      required: true
+      
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: |
+        Please provide evidence of the change:
+        - Screenshots
+        - Network traces
+        - Official announcements
+        - Documentation links
+      placeholder: |
+        Paste screenshots, links, or command outputs here
+        
+  - type: dropdown
+    id: testing-network
+    attributes:
+      label: Testing Network Type
+      description: What type of network did you test from?
+      options:
+        - "IPv6-only network"
+        - "Dual-stack network (IPv4+IPv6)"
+        - "IPv6 tunnel (e.g., Hurricane Electric)"
+        - "Mobile network with IPv6"
+        - "Other"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any other relevant information about the IPv6 support
+      placeholder: |
+        e.g., Only certain regions have IPv6, CDN endpoints vary, etc.
+        
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      options:
+        - label: I have personally tested and verified this change
+          required: true
+        - label: I tested from multiple locations/networks (if applicable)
+        - label: I have included evidence of the change

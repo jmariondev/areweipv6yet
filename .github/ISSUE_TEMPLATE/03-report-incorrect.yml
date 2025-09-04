@@ -1,0 +1,66 @@
+name: Report Incorrect Information
+description: Report incorrect IPv6 status or information for a service
+title: "[Incorrect] "
+labels: ["correction", "needs-verification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found incorrect information? Help us fix it!
+        
+  - type: input
+    id: service-name
+    attributes:
+      label: Service Name
+      description: Which service has incorrect information?
+      placeholder: "e.g., Discord, Netflix, GitHub"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: what-is-incorrect
+    attributes:
+      label: What is incorrect?
+      description: |
+        Please describe what information is wrong:
+        - Wrong IPv6 status?
+        - Incorrect test results?
+        - Wrong category?
+        - Outdated information?
+      placeholder: |
+        The tracker shows... but actually...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: correct-information
+    attributes:
+      label: Correct Information
+      description: What should the information be?
+      placeholder: |
+        The correct status should be...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: |
+        Please provide evidence supporting the correction:
+        - Test results
+        - Screenshots
+        - Official documentation
+        - Network traces
+      placeholder: |
+        Paste evidence here
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      options:
+        - label: I have verified this information myself
+          required: true

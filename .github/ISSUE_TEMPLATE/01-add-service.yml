@@ -1,0 +1,86 @@
+name: Add New Service
+description: Request to add a new service to the IPv6 tracker
+title: "[Add Service] "
+labels: ["new-service", "needs-verification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping us track IPv6 adoption! Please fill out the information below to add a new service.
+        
+  - type: input
+    id: service-name
+    attributes:
+      label: Service Name
+      description: The official name of the service
+      placeholder: "e.g., Discord, Netflix, GitHub"
+    validations:
+      required: true
+      
+  - type: input
+    id: service-url
+    attributes:
+      label: Service URL
+      description: The main URL for the service
+      placeholder: "https://example.com"
+    validations:
+      required: true
+      
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Service Description
+      description: Brief description of what the service does
+      placeholder: "A platform for..."
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: ipv6-status
+    attributes:
+      label: IPv6 Status
+      description: What is the current IPv6 support status?
+      options:
+        - "Unknown - I haven't tested"
+        - "None - No IPv6 support"
+        - "Partial - Some features work on IPv6"
+        - "Full - Complete IPv6 support"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: testing-details
+    attributes:
+      label: Testing Details
+      description: |
+        If you've tested IPv6 support, please provide details:
+        - Does the main domain have AAAA records?
+        - Does the service work when accessed via IPv6?
+        - Are there any features that don't work on IPv6?
+        - Testing tools used (e.g., dig, nslookup, IPv6-only network)
+      placeholder: |
+        I tested using...
+        The results were...
+        
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence/Documentation
+      description: |
+        Please provide any evidence or documentation:
+        - Screenshots of DNS lookups
+        - Network traces
+        - Links to official documentation
+        - Error messages when using IPv6
+      placeholder: |
+        Paste screenshots, command outputs, or links here
+        
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      options:
+        - label: I have tested this service's IPv6 support myself
+        - label: I have checked that this service is not already in the tracker
+          required: true
