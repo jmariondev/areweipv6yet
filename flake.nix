@@ -15,6 +15,7 @@
       devShells.default = pkgs.mkShellNoCC {
         buildInputs = with pkgs; [
           claude-code
+          claude-code-router
           dnsutils
           nodejs
         ];
