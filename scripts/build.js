@@ -27,6 +27,10 @@ const services = curated
 const stats = { total: services.length, full: 0, partial: 0, none: 0, unknown: 0 };
 for (const service of services) stats[service.status] += 1;
 
+const aggregates = {
+  httpUnreachable: services.filter((s) => s.checks.web?.pass && s.checks.http?.pass === false).length,
+};
+
 fs.rmSync(DIST, { recursive: true, force: true });
 fs.cpSync('public', DIST, { recursive: true });
 
@@ -38,7 +42,7 @@ const barCss = ['full', 'partial', 'none', 'unknown']
   .join('\n');
 fs.appendFileSync(path.join(DIST, 'style.css'), `\n/* generated: progress-bar segment proportions */\n${barCss}\n`);
 
-fs.writeFileSync(path.join(DIST, 'index.html'), page({ services, stats, generated, runs: results.runs }));
+fs.writeFileSync(path.join(DIST, 'index.html'), page({ services, stats, generated, runs: results.runs, aggregates }));
 
 fs.writeFileSync(
   path.join(DIST, 'api.json'),
