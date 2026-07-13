@@ -46,7 +46,9 @@ it "manual" and `api.json` exposes both.
   `--http` mode does HEAD requests over IPv6 sockets and only runs on
   IPv6-capable machines. The two modes write disjoint keys in results.json.
   DNS query errors (timeouts, SERVFAIL) keep the previous result rather than
-  recording a false.
+  recording a false. Checks only fail on v4-supported-but-no-v6: MX/NS hosts
+  with no address records at all record `null` (not applicable), and a www
+  that doesn't exist in DNS is dropped so the service is judged on apex alone.
 - `scripts/build.js` — reads both data files, derives statuses, renders
   `dist/index.html` via template literals (`scripts/lib/html.js`), and emits
   `dist/api.json` + `dist/sitemap.xml`, copying `public/` into `dist/`.

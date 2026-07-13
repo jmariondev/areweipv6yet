@@ -15,6 +15,15 @@ export async function hasAAAA(host) {
   }
 }
 
+export async function hasA(host) {
+  try {
+    return (await resolver.resolve4(host)).length > 0;
+  } catch (err) {
+    if (isNoRecords(err)) return false;
+    throw err;
+  }
+}
+
 // MX/NS live on the zone, not necessarily on the queried host (e.g.
 // store.steampowered.com has neither) — walk up to parent domains.
 async function resolveUp(resolve, host) {

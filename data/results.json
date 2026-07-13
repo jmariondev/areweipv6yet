@@ -2,10 +2,10 @@
   "version": 2,
   "runs": {
     "dns": {
-      "at": "2026-07-13T06:00:54.556Z"
+      "at": "2026-07-13T06:18:11.447Z"
     },
     "http": {
-      "at": "2026-07-13T05:33:41.600Z"
+      "at": "2026-07-13T06:19:02.441Z"
     }
   },
   "services": {
@@ -34,7 +34,35 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
+      }
+    },
+    "akamai": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "amazon": {
@@ -62,7 +90,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "anthropic": {
@@ -90,7 +118,35 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
+      }
+    },
+    "apple": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "apple-tv": {
@@ -113,7 +169,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "aws": {
@@ -133,10 +189,10 @@
         "since": "2026-07-13T05:31:59.006Z"
       },
       "http": {
-        "pass": false,
+        "pass": true,
         "method": "http",
-        "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "azure": {
@@ -159,7 +215,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "bbc": {
@@ -187,7 +243,58 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
+      }
+    },
+    "bing": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
+      }
+    },
+    "bluesky": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "chatgpt": {
@@ -215,7 +322,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "claude": {
@@ -243,7 +350,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "cloudflare": {
@@ -271,7 +378,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "cnn": {
@@ -299,7 +406,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "digitalocean": {
@@ -327,7 +434,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "discord": {
@@ -355,7 +462,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "disney-plus": {
@@ -383,7 +490,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "docker-hub": {
@@ -406,7 +513,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "doordash": {
@@ -434,7 +541,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "dropbox": {
@@ -462,7 +569,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "duckduckgo": {
@@ -490,7 +597,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "ebay": {
@@ -518,7 +625,35 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
+      }
+    },
+    "etsy": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "facebook": {
@@ -546,7 +681,35 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
+      }
+    },
+    "fastly": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "gcp": {
@@ -566,10 +729,10 @@
         "since": "2026-07-13T05:31:59.006Z"
       },
       "http": {
-        "pass": false,
+        "pass": true,
         "method": "http",
-        "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "gemini": {
@@ -592,7 +755,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "github": {
@@ -620,7 +783,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "gitlab": {
@@ -648,7 +811,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "google": {
@@ -676,14 +839,14 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:32:23.032Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "hbo-max": {
       "web": {
-        "pass": false,
+        "pass": true,
         "method": "dns",
-        "since": "2026-07-13T05:31:59.006Z"
+        "since": "2026-07-13T06:18:11.447Z"
       },
       "www": {
         "pass": true,
@@ -701,10 +864,38 @@
         "since": "2026-07-13T05:31:59.006Z"
       },
       "http": {
-        "pass": false,
+        "pass": true,
         "method": "http",
-        "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
+      }
+    },
+    "hetzner": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "huggingface": {
@@ -732,7 +923,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "hulu": {
@@ -760,7 +951,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "instagram": {
@@ -788,7 +979,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "linkedin": {
@@ -816,7 +1007,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "medium": {
@@ -844,35 +1035,35 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
-    "microsoft-365": {
+    "microsoft": {
       "web": {
         "pass": true,
         "method": "dns",
-        "since": "2026-07-13T05:31:59.006Z"
+        "since": "2026-07-13T06:18:11.447Z"
       },
       "www": {
         "pass": true,
         "method": "dns",
-        "since": "2026-07-13T05:31:59.006Z"
+        "since": "2026-07-13T06:18:11.447Z"
       },
       "mx": {
-        "pass": null,
+        "pass": true,
         "method": "dns",
-        "since": "2026-07-13T05:31:59.006Z"
+        "since": "2026-07-13T06:18:11.447Z"
       },
       "ns": {
         "pass": true,
         "method": "dns",
-        "since": "2026-07-13T05:31:59.006Z"
+        "since": "2026-07-13T06:18:11.447Z"
       },
       "http": {
         "pass": true,
         "method": "http",
-        "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "midjourney": {
@@ -900,7 +1091,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "netflix": {
@@ -928,7 +1119,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "netlify": {
@@ -956,7 +1147,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "npm": {
@@ -984,7 +1175,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "nytimes": {
@@ -1012,7 +1203,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "openai": {
@@ -1040,7 +1231,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "paramount-plus": {
@@ -1065,10 +1256,10 @@
         "since": "2026-07-13T05:31:59.006Z"
       },
       "http": {
-        "pass": true,
+        "pass": false,
         "method": "http",
-        "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "paypal": {
@@ -1096,7 +1287,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "perplexity": {
@@ -1124,7 +1315,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "pinterest": {
@@ -1152,7 +1343,63 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
+      }
+    },
+    "proton": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "ns": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
+      }
+    },
+    "pypi": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "reddit": {
@@ -1180,7 +1427,63 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
+      }
+    },
+    "shopify": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
+      }
+    },
+    "signal": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "slack": {
@@ -1208,7 +1511,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "snapchat": {
@@ -1236,7 +1539,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "spotify": {
@@ -1261,10 +1564,10 @@
         "since": "2026-07-13T05:31:59.006Z"
       },
       "http": {
-        "pass": false,
+        "pass": true,
         "method": "http",
-        "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "stackoverflow": {
@@ -1292,7 +1595,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "steam": {
@@ -1315,7 +1618,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "stripe": {
@@ -1343,7 +1646,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "target": {
@@ -1371,7 +1674,35 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
+      }
+    },
+    "telegram": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T06:18:11.447Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T06:19:02.441Z",
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "tiktok": {
@@ -1399,7 +1730,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "twitch": {
@@ -1427,7 +1758,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "uber": {
@@ -1455,7 +1786,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "vercel": {
@@ -1483,7 +1814,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "walmart": {
@@ -1511,7 +1842,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "whatsapp": {
@@ -1534,7 +1865,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "wikipedia": {
@@ -1562,7 +1893,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "x": {
@@ -1590,7 +1921,7 @@
         "pass": false,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "youtube": {
@@ -1618,7 +1949,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     },
     "zoom": {
@@ -1646,7 +1977,7 @@
         "pass": true,
         "method": "http",
         "since": "2026-07-13T05:33:41.600Z",
-        "checked_at": "2026-07-13T05:33:41.600Z"
+        "checked_at": "2026-07-13T06:19:02.441Z"
       }
     }
   }

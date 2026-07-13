@@ -49,6 +49,10 @@ services:
     name: DuckDuckGo
     url: https://duckduckgo.com
     description: Privacy-focused search engine
+  - id: bing
+    name: Bing
+    url: https://www.bing.com
+    description: Microsoft's search engine
   - id: spotify
     name: Spotify
     url: https://www.spotify.com
@@ -77,6 +81,18 @@ services:
     name: DigitalOcean
     url: https://www.digitalocean.com
     description: Developer-friendly cloud platform
+  - id: fastly
+    name: Fastly
+    url: https://www.fastly.com
+    description: Edge cloud platform and CDN
+  - id: akamai
+    name: Akamai
+    url: https://www.akamai.com
+    description: CDN and edge computing platform
+  - id: hetzner
+    name: Hetzner
+    url: https://www.hetzner.com
+    description: European hosting and cloud provider
   - id: instagram
     name: Instagram
     url: https://www.instagram.com
@@ -97,10 +113,22 @@ services:
     name: Snapchat
     url: https://www.snapchat.com
     description: Multimedia messaging app
+  - id: bluesky
+    name: Bluesky
+    url: https://bsky.app
+    description: Decentralized social network
   - id: whatsapp
     name: WhatsApp Web
     url: https://web.whatsapp.com
     description: Web client for WhatsApp messaging
+  - id: telegram
+    name: Telegram
+    url: https://telegram.org
+    description: Cloud-based messaging platform
+  - id: signal
+    name: Signal
+    url: https://signal.org
+    description: Private messaging app
   - id: disney-plus
     name: Disney+
     url: https://www.disneyplus.com
@@ -110,8 +138,8 @@ services:
     url: https://www.hulu.com
     description: Streaming service
   - id: hbo-max
-    name: Max (HBO Max)
-    url: https://www.max.com
+    name: HBO Max
+    url: https://www.hbomax.com
     description: Warner Bros streaming service
   - id: apple-tv
     name: Apple TV+
@@ -125,6 +153,14 @@ services:
     name: eBay
     url: https://www.ebay.com
     description: Online marketplace
+  - id: shopify
+    name: Shopify
+    url: https://www.shopify.com
+    description: E-commerce platform for online stores
+  - id: etsy
+    name: Etsy
+    url: https://www.etsy.com
+    description: Marketplace for handmade and vintage goods
   - id: walmart
     name: Walmart
     url: https://www.walmart.com
@@ -157,6 +193,10 @@ services:
     name: npm
     url: https://www.npmjs.com
     description: JavaScript package registry
+  - id: pypi
+    name: PyPI
+    url: https://pypi.org
+    description: Python package registry
   - id: docker-hub
     name: Docker Hub
     url: https://hub.docker.com
@@ -185,14 +225,22 @@ services:
     name: Slack
     url: https://slack.com
     description: Team collaboration platform
-  - id: microsoft-365
-    name: Microsoft 365
-    url: https://www.microsoft365.com
-    description: Office productivity suite
+  - id: microsoft
+    name: Microsoft
+    url: https://www.microsoft.com
+    description: Technology company and software maker
+  - id: apple
+    name: Apple
+    url: https://www.apple.com
+    description: Consumer technology company
   - id: dropbox
     name: Dropbox
     url: https://www.dropbox.com
     description: Cloud storage service
+  - id: proton
+    name: Proton
+    url: https://proton.me
+    description: Privacy-focused email and cloud services
   - id: cnn
     name: CNN
     url: https://www.cnn.com
