@@ -72,9 +72,11 @@ function card(service) {
   </div>`;
 }
 
+// No inline style attribute — the CSP (style-src 'self') blocks those; the
+// segment proportions are appended to style.css at build time instead.
 function progressSegment(status, count, percent) {
   if (status === 'unknown' && count === 0) return '';
-  return `<div class="progress-segment progress-${status}" style="width: ${percent}%" title="${STATUS_LABEL[status]}: ${count} services (${percent}%)">
+  return `<div class="progress-segment progress-${status}" title="${STATUS_LABEL[status]}: ${count} services (${percent}%)">
         <span class="progress-label">${count}</span>
       </div>`;
 }

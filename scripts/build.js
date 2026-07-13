@@ -30,6 +30,14 @@ for (const service of services) stats[service.status] += 1;
 fs.rmSync(DIST, { recursive: true, force: true });
 fs.cpSync('public', DIST, { recursive: true });
 
+// Progress-bar proportions depend on the data, but the CSP (style-src 'self')
+// forbids inline style attributes — so append them to the stylesheet instead.
+const barCss = ['full', 'partial', 'none', 'unknown']
+  .filter((status) => stats[status] > 0)
+  .map((status) => `.progress-bar .progress-${status} { flex: ${stats[status]}; }`)
+  .join('\n');
+fs.appendFileSync(path.join(DIST, 'style.css'), `\n/* generated: progress-bar segment proportions */\n${barCss}\n`);
+
 fs.writeFileSync(path.join(DIST, 'index.html'), page({ services, stats, generated, runs: results.runs }));
 
 fs.writeFileSync(
