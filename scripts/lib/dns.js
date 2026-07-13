@@ -24,8 +24,8 @@ export async function hasA(host) {
   }
 }
 
-// MX/NS live on the zone, not necessarily on the queried host (e.g.
-// store.steampowered.com has neither) — walk up to parent domains.
+// NS records live on the enclosing zone, not necessarily on the queried
+// host (e.g. store.steampowered.com has none) — walk up to parent domains.
 async function resolveUp(resolve, host) {
   let labels = host.split('.');
   while (labels.length >= 2) {
@@ -40,8 +40,17 @@ async function resolveUp(resolve, host) {
   return [];
 }
 
+// MX is host-specific, not zone-inherited: mail for aws.amazon.com uses that
+// exact name's MX — amazon.com's MX belongs to a different service. No
+// records means the host takes no mail, which is not an IPv6 gap.
 export async function mxHosts(host) {
-  const records = await resolveUp((d) => resolver.resolveMx(d), host);
+  let records;
+  try {
+    records = await resolver.resolveMx(host);
+  } catch (err) {
+    if (isNoRecords(err)) return [];
+    throw err;
+  }
   // RFC 7505 null MX ("0 .") means the domain explicitly takes no mail.
   return records.map((r) => r.exchange).filter((x) => x && x !== '.');
 }
