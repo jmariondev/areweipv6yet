@@ -1,0 +1,1653 @@
+{
+  "version": 2,
+  "runs": {
+    "dns": {
+      "at": "2026-07-13T05:32:13.266Z"
+    },
+    "http": {
+      "at": "2026-07-13T05:33:41.600Z"
+    }
+  },
+  "services": {
+    "airbnb": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "amazon": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "anthropic": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "apple-tv": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "aws": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "azure": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "bbc": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "chatgpt": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": null,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "claude": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": null,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "cloudflare": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "cnn": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "digitalocean": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "discord": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "disney-plus": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "docker-hub": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "doordash": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "dropbox": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "duckduckgo": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "ebay": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "facebook": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "gcp": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "gemini": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "github": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "gitlab": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "google": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:35.845Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:35.845Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:35.845Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:35.845Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:32:23.032Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "hbo-max": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "huggingface": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "hulu": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "instagram": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "linkedin": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "medium": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "microsoft-365": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": null,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "midjourney": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "netflix": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "netlify": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "npm": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "nytimes": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "openai": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "paramount-plus": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "paypal": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "perplexity": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "pinterest": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "reddit": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:35.845Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:35.845Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:35.845Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:35.845Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "slack": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "snapchat": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "spotify": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "stackoverflow": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "steam": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:35.845Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:35.845Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:35.845Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "stripe": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "target": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "tiktok": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "twitch": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "uber": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "vercel": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "walmart": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "whatsapp": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "wikipedia": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "x": {
+      "web": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": false,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "youtube": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    },
+    "zoom": {
+      "web": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "www": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "mx": {
+        "pass": false,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "ns": {
+        "pass": true,
+        "method": "dns",
+        "since": "2026-07-13T05:31:59.006Z"
+      },
+      "http": {
+        "pass": true,
+        "method": "http",
+        "since": "2026-07-13T05:33:41.600Z",
+        "checked_at": "2026-07-13T05:33:41.600Z"
+      }
+    }
+  }
+}

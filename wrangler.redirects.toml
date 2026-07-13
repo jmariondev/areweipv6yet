@@ -1,0 +1,32 @@
+# Canonical-domain redirects for everything that isn't areweipv6yet.com.
+name = "areweipv6yet-redirects"
+main = "workers/redirect.js"
+compatibility_date = "2026-07-01"
+
+[[routes]]
+pattern = "www.areweipv6yet.com/*"
+zone_name = "areweipv6yet.com"
+
+[[routes]]
+pattern = "areweipv6yet.net/*"
+zone_name = "areweipv6yet.net"
+
+[[routes]]
+pattern = "www.areweipv6yet.net/*"
+zone_name = "areweipv6yet.net"
+
+[[routes]]
+pattern = "areweipv6yet.org/*"
+zone_name = "areweipv6yet.org"
+
+[[routes]]
+pattern = "www.areweipv6yet.org/*"
+zone_name = "areweipv6yet.org"
+
+[[routes]]
+pattern = "arewev6yet.com/*"
+zone_name = "arewev6yet.com"
+
+[[routes]]
+pattern = "www.arewev6yet.com/*"
+zone_name = "arewev6yet.com"

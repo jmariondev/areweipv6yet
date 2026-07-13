@@ -5,28 +5,45 @@ on:
     branches:
       - main
   workflow_dispatch:
+  workflow_call:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: production
-    
+
     steps:
       - uses: actions/checkout@v4
-      
+        with:
+          # When called from check.yml right after it pushes results, the
+          # triggering SHA predates that commit — always deploy main's tip.
+          ref: main
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          
+          node-version: '22'
+          cache: npm
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: Build site
         run: npm run build
-        
-      - name: Deploy to Cloudflare Pages
+
+      - name: Deploy site
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: deploy --env production
+          command: deploy
+
+      - name: Deploy redirect worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy -c wrangler.redirects.toml

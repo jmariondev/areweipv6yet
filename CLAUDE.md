@@ -3,116 +3,82 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with
 code in this repository.
 
-## Essential Commands
+## Commands
 
-### Development Commands
-- `npm install` - Install dependencies
-- `npm run build` - Build site with Eleventy
-- `npm run dev` - Build and serve locally with Cloudflare Workers dev server
-- `npm run eleventy:watch` - Watch mode for Eleventy (rebuilds on changes)
-- `npm run eleventy:serve` - Serve with Eleventy's built-in dev server
-- `npm run validate` - Validate service data against JSON schema
-- `npm run check-ipv6` - Run automated IPv6 DNS and HTTP connectivity checks
-- `npm run deploy` - Deploy to Cloudflare Workers/Pages
+- `npm install` — install dependencies (js-yaml and wrangler only)
+- `npm run validate` — validate `data/services.yaml` and `data/results.json`
+- `npm run check` — DNS checks (AAAA on apex/www, MX hosts, NS hosts); writes `data/results.json`
+- `npm run check:http` — HTTP-over-IPv6 checks; refuses to run without a global IPv6 address
+- `npm run build` — build the site into `dist/`
+- `npm run dev` — rebuild on change and serve on http://localhost:8080
+- `npm run deploy` — build and deploy both Workers via wrangler
 
-### IPv6 Checking Options
-- `npm run check-ipv6 -- --verbose` - Show detailed output during checks
-- `npm run check-ipv6 -- --detail` - Show comprehensive test results
+Checker flags: `--only id[,id]` to limit services, `--verbose` for per-service output.
 
-## Architecture Overview
+## Architecture
 
-### Core Concept
-This is an Eleventy-based static site that tracks IPv6 adoption across popular
-web services. It uses a YAML database with automated DNS/HTTP checking and
-manual verification status tracking.
+One-page static site, no framework. Plain Node scripts render everything.
 
-### Data Structure
-- **Services Database**: `data/services.yaml` - Main database of services and their IPv6 status
-- **Schema Validation**: `data/schema.json` - JSON Schema for service data validation
-- **Status Types**: `unknown`, `none`, `partial`, `full`
-- **Service Types**: `service` (default), `cloud` (for cloud providers)
-- **Test IDs**: `apex_domain`, `www_domain` (tests both DNS AAAA records AND HTTP connectivity)
-- **Legacy Test IDs**: `aaaa_record`, `www_variant` (automatically migrated to new IDs)
+### Data ownership split (the core design decision)
 
-### Build Process
-1. Eleventy reads configuration from `eleventy.config.mjs`
-2. Processes Nunjucks templates in `site/src/` using `data/services.yaml` as global data
-3. Applies custom filters for sorting, statistics, status emojis, and formatting
-4. Minifies HTML (html-minifier-terser), CSS (CSSO), and JS (Terser) automatically
-5. Generates API JSON via Eleventy post-build hook
-6. Outputs complete optimized static site to `site/dist/`
+- `data/services.yaml` — **human-curated only**: `id`, `name`, `url`,
+  `description`, optional `override: {status, reason}`. CI never writes here.
+- `data/results.json` — **machine-owned only**: check results keyed by service
+  id. Humans never edit it. Designed for minimal diff churn: one timestamp per
+  run method at the top, and each check's `since` only moves when its `pass`
+  value flips. An unchanged daily run diffs as a single line.
 
-### Template System
-- **Engine**: Eleventy with Nunjucks templating
-- **Base Layout**: `site/src/_includes/base.njk` - shared HTML structure
-- **Main Page**: `site/src/index.njk` - home page template
-- **Additional Templates**: `sitemap.njk`, `og-image.svg.njk`
-- **Custom Filters** (defined in `eleventy.config.mjs`):
-  - `statusEmoji` - converts status to emoji representation
-  - `testIcon` - converts test result to icon
-  - `sortServices` - sorts by status then name
-  - `countByStatus` - counts services by status
-  - `visibleTests` - filters tests with non-null results
-  - `isoDate`, `shortDate` - date formatting
-  - `percent`, `getStats` - statistics calculations
+### Status derivation (`scripts/lib/derive.js`)
 
-### IPv6 Testing
-- **Automated**: `scripts/check-ipv6.js` performs both DNS AAAA lookups AND HTTP connectivity tests
-- **Test Framework**: Each service has multiple test types (apex_domain, www_domain)
-- **Validation**: Tests both that DNS AAAA records exist AND that HTTP/HTTPS works over IPv6
-- **Results Tracking**: Each test stores result (true/false/null), last_checked timestamp
-- **Status Logic**: Overall status derived from individual test results
-- **Special Handling**: Includes workarounds (e.g., Azure timeout handling)
+Status (`full`/`partial`/`none`/`unknown`) is **derived at build time** from
+the web DNS checks only: both apex and www pass → full; one → partial; none →
+none; no results → unknown. Services without a www variant (deeper subdomains
+like `store.steampowered.com`) are judged on apex alone. MX and NS results are
+auxiliary badges; HTTP results are advisory notes. None of them affect the
+headline status — so a probe quirk can annotate but never demote a service.
+`override.status` (requires a `reason`) beats the derived status; the UI marks
+it "manual" and `api.json` exposes both.
 
-### Deployment
-- **Target**: Cloudflare Workers + Pages (hybrid approach)
-- **Worker**: `workers/index.js` - handles HTTPS redirects, domain canonicalization, security headers
-- **Configuration**: `wrangler.toml` with production environment
-- **Domains**: areweipv6yet.com, .net, .org, arewev6yet.com
-- **Security**: CSP headers, HSTS, X-Frame-Options, etc.
+### Scripts
 
-### GitHub Actions
-- **Validation**: `.github/workflows/validate.yml` - runs on PRs to validate data changes
-- **IPv6 Checks**: `.github/workflows/check-ipv6.yml` - daily automated IPv6 testing
-- **Deployment**: `.github/workflows/deploy.yml` - deploys on main branch pushes
+- `scripts/check.js` — checker CLI. Default mode is DNS-only (works anywhere,
+  including GitHub-hosted runners, which have **no IPv6 connectivity**).
+  `--http` mode does HEAD requests over IPv6 sockets and only runs on
+  IPv6-capable machines. The two modes write disjoint keys in results.json.
+  DNS query errors (timeouts, SERVFAIL) keep the previous result rather than
+  recording a false.
+- `scripts/build.js` — reads both data files, derives statuses, renders
+  `dist/index.html` via template literals (`scripts/lib/html.js`), and emits
+  `dist/api.json` + `dist/sitemap.xml`, copying `public/` into `dist/`.
+  No minification anywhere — the CDN compresses on the wire.
+- `scripts/validate.js` — zero-dep validator (no JSON Schema library).
+  Rejects unknown keys, duplicate ids, non-https URLs, and overrides without
+  reasons.
+- `scripts/lib/domains.js` — derives hostnames to check from a service URL
+  (www-stripping / www-adding / subdomain-no-www heuristic).
 
-## Key File Locations
+### Hosting
 
-### Configuration & Data
-- Eleventy config: `eleventy.config.mjs`
-- Service data: `data/services.yaml`
-- Schema: `data/schema.json`
+- Primary domain: assets-only Cloudflare Worker (`wrangler.toml`, no `main`),
+  serving `dist/` with security headers from `public/_headers`.
+- Alternate domains (.net/.org/typo + all www forms): `workers/redirect.js`
+  via `wrangler.redirects.toml`, 301 to `https://areweipv6yet.com`.
+- HTTP→HTTPS relies on the zone's "Always Use HTTPS" setting, not code.
 
-### Build Scripts
-- `scripts/check-ipv6.js` - Automated IPv6 DNS and HTTP connectivity tests
-- `scripts/validate-data.js` - JSON Schema validation
-- `scripts/analyze-status.js` - Compare service status with test results
+### CI (`.github/workflows/`)
 
-### Site Source
-- Templates: `site/src/*.njk`
-- Base layout: `site/src/_includes/base.njk`
-- Styles: `site/src/style.css` (minified during build)
-- Scripts: `site/src/script.js` (minified during build)
-- SEO files: `site/src/robots.txt`, `site/src/sitemap.njk`
+- `validate.yml` — PRs and main pushes: validate + build smoke test.
+- `check.yml` — daily cron: DNS checks, commits `data/results.json`, then
+  explicitly calls `deploy.yml` (`workflow_call` + `secrets: inherit`) because
+  pushes made with `GITHUB_TOKEN` never trigger push-based workflows.
+- `deploy.yml` — reusable; always checks out `main`'s tip (the calling
+  workflow's SHA predates the results commit it just pushed).
 
-### Output & Infrastructure
-- Built site: `site/dist/`
-- Cloudflare Worker: `workers/index.js`
-- Deployment config: `wrangler.toml`
+## Important notes
 
-## Contributing Workflow
-
-1. Edit `data/services.yaml` to add/update services
-2. Run `npm run validate` to check schema compliance
-3. Run `npm run build` to generate updated site
-4. Test locally with `npm run dev` or `npm run eleventy:serve`
-5. PRs trigger validation workflow automatically
-
-## Important Notes
-
-- Always validate data changes with `npm run validate` before committing
-- The IPv6 checker script modifies `data/services.yaml` in-place
-- Service IDs must be lowercase alphanumeric with hyphens only
-- Each service requires at minimum: id, name, url, category, ipv6.status, ipv6.tests array
-- Test IDs use new format (`apex_domain`, `www_domain`); legacy IDs are auto-migrated
-- When writing quick hack scripts (e.g., migrations), use Node.js - Python is not available
+- Service ids are lowercase alphanumeric with hyphens.
+- Always run `npm run validate` after touching `data/services.yaml`.
+- Never hardcode per-service exceptions in the checker; use an `override` in
+  services.yaml with a reason instead.
+- When writing quick hack scripts (e.g. migrations), use Node.js — Python is
+  not available.

@@ -5,27 +5,27 @@
 ## Type of Change
 
 - [ ] Adding new service(s)
-- [ ] Updating service status
+- [ ] Adding or changing an override
+- [ ] Contributing HTTP-over-IPv6 results (`npm run check:http`)
 - [ ] Bug fix
 - [ ] Documentation update
 - [ ] Other (please describe)
 
 ## Service Changes
 
-<!-- If adding/updating services, fill this out -->
+<!-- If adding a service: just id, name, url, description in data/services.yaml.
+     Status is derived automatically from the daily DNS checks — don't set one.
+     If adding an override: include your evidence below; the reason field is required. -->
 
-### Service Name: 
-### Current Status: 
-### New Status: 
+### Service Name:
 ### Evidence:
-<!-- Provide links, screenshots, or other evidence -->
+<!-- Provide links, screenshots, or command output (e.g. dig AAAA) -->
 
 ## Checklist
 
 - [ ] I have validated my changes with `npm run validate`
-- [ ] I have provided evidence for any status changes
-- [ ] I have updated the `last_manual_verification` date if applicable
-- [ ] My changes follow the existing data format
+- [ ] I have not hand-edited `data/results.json` (machine-owned; only `npm run check` / `check:http` write it)
+- [ ] Overrides include a clear `reason`
 
 ## Additional Notes
 
