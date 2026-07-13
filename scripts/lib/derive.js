@@ -18,16 +18,6 @@ export function verdict(stats) {
   return { answer: 'No. Not even close.', key: 'nope' };
 }
 
-// When the current headline status was established: the latest flip among the
-// checks that decide it (web/www). Null when nothing applicable has run.
-export function statusSince(checks) {
-  const dates = [checks?.web, checks?.www]
-    .filter((check) => check && check.pass !== null && check.since)
-    .map((check) => check.since);
-  if (!dates.length) return null;
-  return dates.sort().at(-1);
-}
-
 // The headline status is derived from the web DNS checks only. MX, NS, and
 // HTTP results are auxiliary signals: they annotate a service but never
 // change its headline status.

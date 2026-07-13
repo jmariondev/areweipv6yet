@@ -433,16 +433,6 @@ main {
   opacity: 0.75;
 }
 
-.scoreboard-table thead th.since-col {
-  text-align: right;
-  width: 110px;
-}
-
-.footnote-ref {
-  color: var(--accent);
-  font-weight: 600;
-}
-
 /* group header rows */
 
 .group-header {
@@ -548,14 +538,6 @@ main {
   text-align: center;
 }
 
-.cell-since {
-  text-align: right;
-  font-size: 0.75rem;
-  color: var(--text-3);
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-
 /* --- methodology ---------------------------------------------------------- */
 
 .methodology {
@@ -572,11 +554,6 @@ main {
 
 .methodology p + p {
   margin-top: 0.625rem;
-}
-
-#since-note {
-  font-size: 0.8125rem;
-  color: var(--text-3);
 }
 
 /* --- contribute ------------------------------------------------------------ */
@@ -757,12 +734,6 @@ footer p + p {
     font-size: 0.5625rem;
     letter-spacing: 0.06em;
     color: var(--text-3);
-  }
-
-  .cell-since {
-    grid-column: 6;
-    justify-self: end;
-    font-size: 0.625rem;
   }
 }
 

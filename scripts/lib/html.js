@@ -1,5 +1,5 @@
 // HTML renderer for the single page. Template literals, no engine.
-import { GROUP_ORDER, statusSince, verdict } from './derive.js';
+import { GROUP_ORDER, verdict } from './derive.js';
 
 const SITE_URL = 'https://areweipv6yet.com/';
 const GITHUB_URL = 'https://github.com/jmariondev/areweipv6yet';
@@ -87,9 +87,8 @@ function pipCell(col, service) {
       hidden = 'HTTP: fail';
     }
   } else {
-    const state = check.pass ? 'passing' : 'failing';
     cls = `${check.pass ? 'pip--pass' : 'pip--fail'}${aux}`;
-    title = `${col.what}: ${state} since ${shortDate(check.since)} (${check.method})`;
+    title = `${col.what}: ${check.pass ? 'passing' : 'failing'} (${check.method})`;
     hidden = `${col.label}: ${check.pass ? 'pass' : 'fail'}`;
   }
 
@@ -100,8 +99,6 @@ function serviceRow(service) {
   const manualBadge = service.override
     ? ` <span class="manual-badge" title="${esc(service.override.reason)}">manual</span>`
     : '';
-  const since = statusSince(service.checks);
-  const sinceCell = since ? `<time datetime="${esc(since)}">${shortDate(since)}</time>` : '';
 
   return `<tr class="service-row" data-status="${service.status}" data-service-id="${esc(service.id)}" role="row">
         <td class="cell-service" data-label="Service" role="cell">
@@ -111,7 +108,6 @@ function serviceRow(service) {
         </td>
         <td class="cell-status" data-label="Status" role="cell"><span class="status-badge status-${service.status}"><span class="pip pip--lg pip--${service.status}" aria-hidden="true"></span>${STATUS_LABEL[service.status]}</span>${manualBadge}</td>
         ${CHECK_COLS.map((col) => pipCell(col, service)).join('\n        ')}
-        <td class="cell-since" data-label="Since" role="cell">${sinceCell}</td>
       </tr>`;
 }
 
@@ -119,7 +115,7 @@ function groupBody(status, services) {
   const meta = GROUP_META[status];
   return `<tbody class="group" data-status="${status}" role="rowgroup">
       <tr class="group-row" role="row">
-        <th class="group-header" colspan="8" scope="colgroup" role="cell">
+        <th class="group-header" colspan="7" scope="colgroup" role="cell">
           <span class="group-title">${esc(meta.title)}</span>
           <span class="group-count">(${services.length})</span>
           <span class="group-sub">${esc(meta.sub)}</span>
@@ -139,13 +135,12 @@ function scoreboard(services) {
   <h2 class="section-marker">Scoreboard</h2>
   <div class="table-scroll">
     <table class="scoreboard-table" role="table">
-      <caption class="visually-hidden">IPv6 support per service: headline status, individual DNS and HTTP checks, and the date the current status was first observed.</caption>
+      <caption class="visually-hidden">IPv6 support per service: headline status and individual DNS and HTTP checks.</caption>
       <thead role="rowgroup">
         <tr role="row">
           <th scope="col" role="columnheader">Service</th>
           <th scope="col" role="columnheader">Status</th>
           ${CHECK_COLS.map((col) => `<th scope="col" class="pip-col${col.aux ? ' aux' : ''}" role="columnheader">${col.label}</th>`).join('\n          ')}
-          <th scope="col" class="since-col" role="columnheader">Since<a href="#since-note" class="footnote-ref" aria-label="See note about dates">*</a></th>
         </tr>
       </thead>
       ${groups.join('\n      ')}
@@ -248,8 +243,7 @@ function methodology(services, aggregates) {
 
   return `<section class="methodology" id="methodology">
   <h2 class="section-marker">Methodology</h2>
-  <p>Every day we check DNS AAAA records on each service&#39;s apex and www hosts; those two checks alone decide the verdict. AAAA records on MX and NS hosts, plus an actual HTTP connection over IPv6, are tracked as supporting signals but never change a service&#39;s status.${unreachable}</p>
-  <p id="since-note"><span class="footnote-ref">*</span> Dates reflect when our monitoring first observed the current state. Services have typically been this way far longer; our probes are newer than their inertia.</p>${githubSelfOwn}
+  <p>Every day we check DNS AAAA records on each service&#39;s apex and www hosts; those two checks alone decide the verdict. AAAA records on MX and NS hosts, plus an actual HTTP connection over IPv6, are tracked as supporting signals but never change a service&#39;s status.${unreachable}</p>${githubSelfOwn}
 </section>`;
 }
 
