@@ -1,7 +1,6 @@
 *.log
 *.tmp
 .DS_Store
-.direnv/
 .env
 .env.local
 .wrangler/

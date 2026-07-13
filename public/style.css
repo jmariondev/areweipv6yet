@@ -480,6 +480,39 @@ main {
   margin-top: 0.5rem;
 }
 
+/* Auxiliary checks (MX, NS) — informational, don't affect headline status */
+.test-item.aux {
+  border-style: dashed;
+  opacity: 0.75;
+}
+
+.manual-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.1rem 0.3rem;
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  opacity: 0.7;
+  cursor: help;
+}
+
+.http-note {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
+
+.http-note.http-warn {
+  opacity: 0.9;
+  color: var(--color-partial);
+}
+
+.checked-line {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
 /* Contribution section */
 .contribute-section {
   margin: 4rem auto 2rem;

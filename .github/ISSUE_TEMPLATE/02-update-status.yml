@@ -1,13 +1,17 @@
-name: Update IPv6 Status
-description: Report a change in a service's IPv6 support status
-title: "[Update] "
+name: Report Incorrect IPv6 Status
+description: Report a service whose displayed IPv6 status doesn't match reality
+title: "[Status] "
 labels: ["status-update", "needs-verification"]
 body:
   - type: markdown
     attributes:
       value: |
-        Help us keep the tracker up to date! Use this form to report changes in IPv6 support.
-        
+        Statuses are derived automatically from daily DNS checks, so most changes
+        (a service adding or dropping AAAA records) correct themselves within a day.
+        Use this form when the *displayed* status is wrong anyway — that usually means
+        the service needs a manual `override` (with a reason) in `data/services.yaml`,
+        or our checker is mis-detecting something.
+
   - type: input
     id: service-name
     attributes:

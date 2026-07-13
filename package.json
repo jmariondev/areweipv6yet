@@ -1,26 +1,21 @@
 {
   "name": "areweipv6yet",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Track IPv6 adoption across popular services",
   "type": "module",
   "scripts": {
-    "build": "eleventy",
-    "validate": "node scripts/validate-data.js",
-    "check-ipv6": "node scripts/check-ipv6.js",
-    "dev": "npm run build && wrangler dev",
-    "deploy": "npm run build && wrangler deploy",
-    "eleventy:watch": "eleventy --watch",
-    "eleventy:serve": "eleventy --serve"
+    "validate": "node scripts/validate.js",
+    "check": "node scripts/check.js",
+    "check:http": "node scripts/check.js --http",
+    "build": "node scripts/build.js",
+    "dev": "node --watch-path=./data --watch-path=./public --watch-path=./scripts scripts/build.js --serve",
+    "deploy": "npm run build && wrangler deploy && wrangler deploy -c wrangler.redirects.toml"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
-    "ajv": "^8.12.0",
-    "ajv-formats": "^2.1.1",
-    "csso": "^5.0.5",
-    "html-minifier-terser": "^7.2.0",
     "js-yaml": "^4.1.0",
-    "terser": "^5.44.0",
-    "wrangler": "^3.0.0"
+    "wrangler": "^4.0.0"
   }
 }
